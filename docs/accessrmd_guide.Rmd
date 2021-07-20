@@ -1,0 +1,39 @@
+---
+title: "A Guide To 'accessrmd'."
+author: "Richard Leyshon"
+date: "`r format(Sys.Date(), '%d %B %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction.
+
+### At A Glance.
+
+### What problem does it solve?
+
+## Functions Gallery.
+
+## Github Actions
+
+### R CMD Build Check
+
+### Test Coverage With Codecov
+
+## References.
+
+## More Projects By The Author.
+
+### 'ptspotter' Package.
+
+### Shiny Applications.
+
+### RPubs.
+
+
