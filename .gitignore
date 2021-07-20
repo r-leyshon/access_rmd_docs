@@ -1,3 +1,6 @@
+# Any knitted doc files
+/docs/*.html
+
 # History files
 .Rhistory
 .Rapp.history
