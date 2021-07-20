@@ -74,4 +74,13 @@ maturity in Shiny development.
 
 ### RPubs.
 
+#### Remote Sensing Trees
+
+[Counting Trees From Space on RPubs](https://rpubs.com/M_Merciless/trees_from_space)
+
+#### Welsh Schools Funding 18/19
+
+[Welsh School Funding on RPubs](https://rpubs.com/M_Merciless/wales_sch_funding1819)
+
+[](https://rpubs.com/M_Merciless/wales_sch_funding1819)
 
