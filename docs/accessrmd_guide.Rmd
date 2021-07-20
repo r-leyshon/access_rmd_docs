@@ -32,6 +32,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### 'ptspotter' Package.
 
+'ptspotter' is a package that aims to simplify some of the mundane tasks
+involved in setting up an analytical pipeline using the fantastic [ProjectTemplate](http://projecttemplate.net/) framework.
+
+[ptspotter is available on CRAN.](https://cran.r-project.org/package=ptspotter)
+
+[ptspotter blog.](https://r-leyshon.github.io/ptspotter_blog/)
+
 ### Shiny Applications.
 
 ### RPubs.
