@@ -32,6 +32,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### 'ptspotter' Package.
 
+[![CRAN status](https://www.r-pkg.org/badges/version/ptspotter)](https://CRAN.R-project.org/package=ptspotter) [![R build status](https://github.com/r-leyshon/ptspotter/workflows/R-CMD-check/badge.svg)](https://github.com/r-leyshon/ptspotter/actions) ![Codecov test coverage](https://codecov.io/gh/r-leyshon/ptspotter/graph/badge.svg)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/ptspotter?color=blue)](https://r-pkg.org/pkg/ptspotter)
 
 'ptspotter' is a package that aims to simplify some of the mundane tasks
