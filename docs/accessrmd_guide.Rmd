@@ -48,6 +48,30 @@ involved in setting up an analytical pipeline using the fantastic [ProjectTempla
 
 ### Shiny Applications.
 
+These applications are presented in reverse order of publication. While the
+contexts of the applications vary, they help to illustrate an increasing
+maturity in Shiny development.
+
+#### Unifyr
+
+[Unifyr on shinyapps.io](https://richleysh84.shinyapps.io/UnifyR/)
+
+#### Google Mobility Data
+
+[Google Mobility Data on shinyapps.io](https://richleysh84.shinyapps.io/uk_all_trends/)
+
+#### Welsh School Funding
+
+[Welsh School Funding on shinyapps.io](https://richleysh84.shinyapps.io/education_combined_scatter_v3/)
+
+#### Common Welsh Place Names
+
+[Common Place Names on shinyapps.io](https://richleysh84.shinyapps.io/common_placenames/)
+
+#### Cardiff Tide Levels
+
+[Cardiff High Tide Levels on shinyapps.io](https://richleysh84.shinyapps.io/cardiff_maps/)
+
 ### RPubs.
 
 
