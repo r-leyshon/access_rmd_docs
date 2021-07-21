@@ -46,6 +46,15 @@ involved in setting up an analytical pipeline using the fantastic [ProjectTempla
 
 ### Highways England Traffic Data
 
+This data pipeline was redeveloped in December 2020 as Brexit approached. It has
+been an important source of road sensor data to help inform the movement of
+traffic around English ports.
+
+The redeveloped pipeline features the querying of the Highways England RESTful
+webTRIS api in parallel using a virtual environment. Additional value beyond the
+MVP was added with a Shiny UI to add data validation and an automated Rmarkdown
+report adding insight on the proportion of site types returning null responses.
+
 [Code on GitHub](https://github.com/datasciencecampus/road-data-dump/tree/r-pipeline)
 
 [Documentation on GitHub Pages](https://datasciencecampus.github.io/road-data-pipeline-documentation/)
@@ -60,21 +69,50 @@ maturity in Shiny development.
 
 #### Unifyr
 
+This is an educational application designed to help trainee data scientists in
+developing their understanding of the different data join functions available
+within the {dplyr} package. Unifyr allows the learner to select subsets from the
+well-known gapminder dataset and observe the output of specified join functions.
+
 [Unifyr on shinyapps.io](https://richleysh84.shinyapps.io/UnifyR/)
 
 #### Google Mobility Data
+
+This Google Mobility Data application was developed at the start of the Covid-19
+pandemic using data derived by the optical processing of pdf data publications, 
+an innovative approach to improving the accessibility of Google's publications.
+
+The application allows the user to select specified local authority or NHS
+bodies in order to view the time series mobility data.
 
 [Google Mobility Data on shinyapps.io](https://richleysh84.shinyapps.io/uk_all_trends/)
 
 #### Welsh School Funding
 
+This application combines 2 open datasets published by Welsh Government:
+Budgeted educational revenue and outturn expenditure. The available data
+dimensions may be selected from to plot upon the chart axes by educational
+phase. Time series data for all available schools and data dimensions may also 
+be viewed upon the second tab. 
+
 [Welsh School Funding on shinyapps.io](https://richleysh84.shinyapps.io/education_combined_scatter_v3/)
 
 #### Common Welsh Place Names
 
+This app was a bit of fun and took very little time. It used some basic language
+processing and geolocation to plot Welsh location names with common prefixes 
+such as "Cwm" or "Aber" on a map. The application used open data published by
+the Welsh Language Commissioner who subsequently approached me to share the
+application codebase with them.
+
 [Common Place Names on shinyapps.io](https://richleysh84.shinyapps.io/common_placenames/)
 
 #### Cardiff Tide Levels
+
+This repo visualises LiDar altitude data of Cardiff openly published by Natural
+Resources Wales. Cardiff was selected due to comparatively high data quality and
+population density. The visualisations compare current day high tide altitude
+with a modelled 2 metre sea rise by the year 2100.
 
 [Cardiff High Tide Levels on shinyapps.io](https://richleysh84.shinyapps.io/cardiff_maps/)
 
@@ -82,9 +120,30 @@ maturity in Shiny development.
 
 #### Remote Sensing Trees
 
+In 2018 I had been approached by a colleague to discuss the feasibility of using
+satellite data to help estimate the quantity of woodland stock in a defined
+rural area. The report documents my exploration work done in this area using
+open source geospatial frameworks and satellite rasters. The work pointed to 
+a promising avenue of analysis but also indicated limitations in the use of open
+source landsat imagery. At the time I recommended the procurement of higher
+resolution remote imagery and verification of tree counts using ground truth
+observational work.
+
 [Counting Trees From Space on RPubs](https://rpubs.com/M_Merciless/trees_from_space)
 
 #### Welsh Schools Funding 18/19
+
+This {flexdashboard} user interface was one of my first pieces of work in
+application development. The dashboard is an adapted RMarkdown output and can 
+very easily be reproduced with some basic data manipulation and markdown syntax.
+Furthermore, the product is self-contained and can be Emailed and freely shared,
+unlike a Shiny application which requires a connection to R and a shiny server.
+
+The dashboard presents Budgeted Education Revenue for financial years 2018/19.
+An interactive map of geolocated schools in Wales is presented with informative
+tooltips highlighting the data dimensions. In additional tabs, linear regression
+models of pupil numbers against delegated budgets for each educational phase are
+presented.
 
 [Welsh School Funding on RPubs](https://rpubs.com/M_Merciless/wales_sch_funding1819)
 
