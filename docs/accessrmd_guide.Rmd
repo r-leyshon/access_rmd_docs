@@ -12,27 +12,43 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Introduction.
+## Introduction
 
-### At A Glance.
+***
+
+### At A Glance
+
+***
 
 ### What problem does it solve?
 
-## Functions Gallery.
+***
+
+## Functions Gallery
+
+***
 
 ## Github Actions
+
+***
 
 ### R CMD Build Check
 [![R build status](https://github.com/datasciencecampus/accessrmd/workflows/R-CMD-check/badge.svg)](https://github.com/datasciencecampus/accessrmd/actions)
 
+***
+
 ### Test Coverage With Codecov
 ![Codecov test coverage](https://codecov.io/gh/datasciencecampus/accessrmd/branch/main/graph/badge.svg)
 
-## References.
+***
 
-## More Projects By The Author.
+## References
 
-### 'ptspotter' Package.
+***
+
+## More Projects By The Author
+
+### 'ptspotter' Package
 
 [![CRAN status](https://www.r-pkg.org/badges/version/ptspotter)](https://CRAN.R-project.org/package=ptspotter) [![R build status](https://github.com/r-leyshon/ptspotter/workflows/R-CMD-check/badge.svg)](https://github.com/r-leyshon/ptspotter/actions) ![Codecov test coverage](https://codecov.io/gh/r-leyshon/ptspotter/graph/badge.svg)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/ptspotter?color=blue)](https://r-pkg.org/pkg/ptspotter)
@@ -43,6 +59,8 @@ involved in setting up an analytical pipeline using the fantastic [ProjectTempla
 [ptspotter is available on CRAN.](https://cran.r-project.org/package=ptspotter)
 
 [ptspotter blog.](https://r-leyshon.github.io/ptspotter_blog/)
+
+***
 
 ### Highways England Traffic Data
 
@@ -59,8 +77,9 @@ report adding insight on the proportion of site types returning null responses.
 
 [Documentation on GitHub Pages](https://datasciencecampus.github.io/road-data-pipeline-documentation/)
 
+***
 
-### Shiny Applications.
+### Shiny Applications
 
 These applications are presented in reverse order of publication. While the
 contexts of the applications vary, they help to illustrate an increasing
@@ -76,6 +95,8 @@ well-known gapminder dataset and observe the output of specified join functions.
 
 [Unifyr on shinyapps.io](https://richleysh84.shinyapps.io/UnifyR/)
 
+***
+
 #### Google Mobility Data
 
 This Google Mobility Data application was developed at the start of the Covid-19
@@ -87,6 +108,8 @@ bodies in order to view the time series mobility data.
 
 [Google Mobility Data on shinyapps.io](https://richleysh84.shinyapps.io/uk_all_trends/)
 
+***
+
 #### Welsh School Funding
 
 This application combines 2 open datasets published by Welsh Government:
@@ -96,6 +119,8 @@ phase. Time series data for all available schools and data dimensions may also
 be viewed upon the second tab. 
 
 [Welsh School Funding on shinyapps.io](https://richleysh84.shinyapps.io/education_combined_scatter_v3/)
+
+***
 
 #### Common Welsh Place Names
 
@@ -107,6 +132,8 @@ application codebase with them.
 
 [Common Place Names on shinyapps.io](https://richleysh84.shinyapps.io/common_placenames/)
 
+***
+
 #### Cardiff Tide Levels
 
 This repo visualises LiDar altitude data of Cardiff openly published by Natural
@@ -116,7 +143,9 @@ with a modelled 2 metre sea rise by the year 2100.
 
 [Cardiff High Tide Levels on shinyapps.io](https://richleysh84.shinyapps.io/cardiff_maps/)
 
-### RPubs.
+***
+
+### RPubs
 
 #### Remote Sensing Trees
 
@@ -130,6 +159,8 @@ resolution remote imagery and verification of tree counts using ground truth
 observational work.
 
 [Counting Trees From Space on RPubs](https://rpubs.com/M_Merciless/trees_from_space)
+
+***
 
 #### Welsh Schools Funding 18/19
 
@@ -147,5 +178,4 @@ presented.
 
 [Welsh School Funding on RPubs](https://rpubs.com/M_Merciless/wales_sch_funding1819)
 
-[](https://rpubs.com/M_Merciless/wales_sch_funding1819)
-
+***
