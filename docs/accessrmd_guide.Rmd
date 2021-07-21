@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ***
 
-## Github Actions
+## Github Actions{.tabset}
 
 ***
 
@@ -40,6 +40,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Test Coverage With Codecov
 ![Codecov test coverage](https://codecov.io/gh/datasciencecampus/accessrmd/branch/main/graph/badge.svg)
 
+## {.unlisted .unnumbered .toc-ignore}
+
 ***
 
 ## References
@@ -48,7 +50,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## More Projects By The Author
 
-### 'ptspotter' Package
+### GitHub Projects{.tabset}
+
+#### 'ptspotter' Package
 
 [![CRAN status](https://www.r-pkg.org/badges/version/ptspotter)](https://CRAN.R-project.org/package=ptspotter) [![R build status](https://github.com/r-leyshon/ptspotter/workflows/R-CMD-check/badge.svg)](https://github.com/r-leyshon/ptspotter/actions) ![Codecov test coverage](https://codecov.io/gh/r-leyshon/ptspotter/graph/badge.svg)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/ptspotter?color=blue)](https://r-pkg.org/pkg/ptspotter)
@@ -62,7 +66,7 @@ involved in setting up an analytical pipeline using the fantastic [ProjectTempla
 
 ***
 
-### Highways England Traffic Data
+#### Highways England Traffic Data
 
 This data pipeline was redeveloped in December 2020 as Brexit approached. It has
 been an important source of road sensor data to help inform the movement of
@@ -79,7 +83,9 @@ report adding insight on the proportion of site types returning null responses.
 
 ***
 
-### Shiny Applications
+### {.unlisted .unnumbered .toc-ignore}
+
+### Shiny Applications{.tabset}
 
 These applications are presented in reverse order of publication. While the
 contexts of the applications vary, they help to illustrate an increasing
@@ -145,7 +151,9 @@ with a modelled 2 metre sea rise by the year 2100.
 
 ***
 
-### RPubs
+### {.unlisted .unnumbered .toc-ignore}
+
+### RPubs{.tabset}
 
 #### Remote Sensing Trees
 
@@ -179,3 +187,5 @@ presented.
 [Welsh School Funding on RPubs](https://rpubs.com/M_Merciless/wales_sch_funding1819)
 
 ***
+
+### {.unlisted .unnumbered .toc-ignore}
