@@ -50,6 +50,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## More Projects By The Author
 
+
 ### GitHub Projects{.tabset}
 
 #### 'ptspotter' Package
@@ -68,9 +69,13 @@ involved in setting up an analytical pipeline using the fantastic [ProjectTempla
 
 #### Highways England Traffic Data
 
+<img src="../www/road_data.png" alt="Road data application interface." height = 400>
+
+
 This data pipeline was redeveloped in December 2020 as Brexit approached. It has
 been an important source of road sensor data to help inform the movement of
-traffic around English ports.
+traffic around English ports. This redevelopment was requested by the faster
+economic indicators team.
 
 The redeveloped pipeline features the querying of the Highways England RESTful
 webTRIS api in parallel using a virtual environment. Additional value beyond the
