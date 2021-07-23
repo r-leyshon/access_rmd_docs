@@ -116,7 +116,7 @@ A continuous deployment workflow has been employed in the development of
 This workflow has allowed efficient adaptation of the package modules while
 ensuring the integrity of the outputs and conditional behaviours.
 
-CD worfklows for this package include:
+CD workflows for this package include:
 
 * CRAN build checks.
 * Test coverage with [Codecov.](https://app.codecov.io/gh/datasciencecampus/accessrmd)
@@ -126,6 +126,28 @@ CD worfklows for this package include:
 
 ### R CMD Build Check
 [![R build status](https://github.com/datasciencecampus/accessrmd/workflows/R-CMD-check/badge.svg)](https://github.com/datasciencecampus/accessrmd/actions)
+
+An automated test suite analagous to the checks run by [CRAN](#cran) on package
+submission. 
+
+This suite of checks is something that I tend to  execute as part of my
+development practice. However, setting automated checks on push to the remote
+ensures that human error is mitigated. Collaborators or developers wishing to
+install the development version of {accessrmd} can be informed of the
+current state of the repository and assured of the package's functionality.
+
+As can be seen from the screenshot below, the package is tested for
+compatibility with three different operating systems, Windows, MacOS and 2
+flavours of Ubuntu.
+
+<img src="../www/os_manifest.png" alt="GitHub operating system check manifest" height="300">
+
+Clicking on an item in the check manifest allows you to view the detailed check
+schedule. If any checks failed, you can consult the log to help pinpoint the 
+error.
+
+<img src="../www/windows_schedule.png" alt="Detailed test schedule for Windows
+latest release.">
 
 ***
 
@@ -137,12 +159,15 @@ CD worfklows for this package include:
 ***
 
 ## References
-
+<a id="cran" href="https://cran.r-project.org/web/packages/submission_checklist.html" target="_blank">Checklist for CRAN submissions</a>
+<br>
 <a id="ukgov" href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag" target="_blank">UK government digital services</a>
+<br>
+<a id="wave" href="https://wave.webaim.org/" target="_blank">WAVE Web Accessibility Evaluation Tool</a>
 <br>
 <a id="wcag" href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG2.1 standard Quick Reference</a>
 <br>
-<a id="wave" href="https://wave.webaim.org/" target="_blank">WAVE Web Accessibility Evaluation Tool</a>
+
 
 
 ***
