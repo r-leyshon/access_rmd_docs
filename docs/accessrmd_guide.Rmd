@@ -22,11 +22,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### What problem does it solve?
 
-<a href="https://wave.webaim.org/report#/https://datasciencecampus.github.io/accessrmd/tests/testfiles/test.html" target="_blank"><img src="../www/test_rmd.png" alt="Accessibility check of a standard rmarkdown output showing errors & warnings."></a>
+<a href="https://wave.webaim.org/report#/https://datasciencecampus.github.io/accessrmd/tests/testfiles/test.html" target="_blank">
+  <img src="../www/test_rmd.png" alt="Accessibility check of a standard rmarkdown output showing errors & warnings.">
+</a>
 Click the image to view the full check on wave.webaim.org, opens in new window.
 
 
-<a href="https://wave.webaim.org/report#/https://datasciencecampus.github.io/accessrmd/tests/testfiles/accessrmd/test.html" target="_blank"><img src="../www/accessrmd.png" alt="Accessibility check of an rmarkdown output modified by acessrmd, showing no errors or warnings."></a>
+<a href="https://wave.webaim.org/report#/https://datasciencecampus.github.io/accessrmd/tests/testfiles/accessrmd/test.html" target="_blank">
+  <img src="../www/accessrmd.png" alt="Accessibility check of an rmarkdown output modified by acessrmd, showing no errors or warnings.">
+</a>
 Click the image to view the full check on wave.webaim.org, opens in new window.
 
 
