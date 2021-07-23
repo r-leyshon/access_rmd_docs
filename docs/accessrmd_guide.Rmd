@@ -44,11 +44,19 @@ enlisting the help of the excellent, open-source
 AA-compliance, but it's a great way to get started with accessibility audits,
 with lots of helpful explanations for newcomers to WCAG 2.1 compliance.
 
+The below image shows the output of a WAVE check on the standard Rmarkdown html
+output. As you can see, there are a number of errors and warnings. Click the
+image for more detail.
+
 <a href="https://wave.webaim.org/report#/https://datasciencecampus.github.io/accessrmd/tests/testfiles/test.html" target="_blank">
   <img src="../www/test_rmd.png" alt="Accessibility check of a standard rmarkdown output showing errors & warnings.">
 </a>
 Click the image to view the full check on wave.webaim.org, opens in new window.
 
+By executing a few functions from the {accessrmd} package, the html format
+issues can be easily remedied, without the developer needing to write any HTML.
+Please observe the output of an Rmarkdown which has been adjusted by {accessrmd}
+functions (again, you can click for an interactive check):
 
 <a href="https://wave.webaim.org/report#/https://datasciencecampus.github.io/accessrmd/tests/testfiles/accessrmd/test.html" target="_blank">
   <img src="../www/accessrmd.png" alt="Accessibility check of an rmarkdown output modified by acessrmd, showing no errors or warnings.">
