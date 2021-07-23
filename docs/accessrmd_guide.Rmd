@@ -116,7 +116,10 @@ developing their understanding of the different data join functions available
 within the {dplyr} package. Unifyr allows the learner to select subsets from the
 well-known gapminder dataset and observe the output of specified join functions.
 
-[Unifyr on shinyapps.io](https://richleysh84.shinyapps.io/UnifyR/)
+<a href="https://richleysh84.shinyapps.io/UnifyR/" target="_blank">
+  <img src="../www/unifyr.png" alt="Unifyr application interface.">
+</a>
+Click the image to see Unifyr on shinyapps.io, opens in new window.
 
 ***
 
@@ -129,7 +132,10 @@ an innovative approach to improving the accessibility of Google's publications.
 The application allows the user to select specified local authority or NHS
 bodies in order to view the time series mobility data.
 
-[Google Mobility Data on shinyapps.io](https://richleysh84.shinyapps.io/uk_all_trends/)
+<a href="https://richleysh84.shinyapps.io/uk_all_trends/" target="_blank">
+  <img src="../www/google_mob.png" alt="Google mobility application interface.">
+</a>
+Click the image to see Google mobility data on shinyapps.io, opens in new window.
 
 ***
 
@@ -141,7 +147,12 @@ dimensions may be selected from to plot upon the chart axes by educational
 phase. Time series data for all available schools and data dimensions may also 
 be viewed upon the second tab. 
 
-[Welsh School Funding on shinyapps.io](https://richleysh84.shinyapps.io/education_combined_scatter_v3/)
+<a href="https://richleysh84.shinyapps.io/education_combined_scatter_v3/" target="_blank">
+  <img src="../www/schools_analysis.png" alt="Schools analysis application interface.">
+</a>
+Click the image to see Welsh school funding data on shinyapps.io, opens in new
+window.
+
 
 ***
 
@@ -153,7 +164,11 @@ such as "Cwm" or "Aber" on a map. The application used open data published by
 the Welsh Language Commissioner who subsequently approached me to share the
 application codebase with them.
 
-[Common Place Names on shinyapps.io](https://richleysh84.shinyapps.io/common_placenames/)
+<a href="https://richleysh84.shinyapps.io/common_placenames/" target="_blank">
+  <img src="../www/common_welsh_names.png" alt="Common Welsh place names application interface.">
+</a>
+Click the image to see common Welsh place names on shinyapps.io, opens in new
+window.
 
 ***
 
@@ -164,7 +179,11 @@ Resources Wales. Cardiff was selected due to comparatively high data quality and
 population density. The visualisations compare current day high tide altitude
 with a modelled 2 metre sea rise by the year 2100.
 
-[Cardiff High Tide Levels on shinyapps.io](https://richleysh84.shinyapps.io/cardiff_maps/)
+<a href="https://richleysh84.shinyapps.io/cardiff_maps/" target="_blank">
+  <img src="../www/cardiff_sealevels.png" alt="Cardiff sea levels map using LiDar data.">
+</a>
+Click the image to see common Cardiff high tide levels on shinyapps.io, opens in
+new window.
 
 ***
 
@@ -183,7 +202,11 @@ source landsat imagery. At the time I recommended the procurement of higher
 resolution remote imagery and verification of tree counts using ground truth
 observational work.
 
-[Counting Trees From Space on RPubs](https://rpubs.com/M_Merciless/trees_from_space)
+<a href="https://rpubs.com/M_Merciless/trees_from_space" target="_blank">
+  <img src="../www/landsat.png" alt="Satellite earth observation of Wales.">
+</a>
+Click the image to see the counting trees from space exploratory report on
+RPubs, opens in new window.
 
 ***
 
@@ -201,7 +224,11 @@ tooltips highlighting the data dimensions. In additional tabs, linear regression
 models of pupil numbers against delegated budgets for each educational phase are
 presented.
 
-[Welsh School Funding on RPubs](https://rpubs.com/M_Merciless/wales_sch_funding1819)
+<a href="https://rpubs.com/M_Merciless/wales_sch_funding1819" target="_blank">
+  <img src="../www/school_map.png" alt="Map of Welsh secondary school locations.">
+</a>
+Click the image to see the Welsh school funding dashboard on RPubs, opens in new
+window.
 
 ***
 
