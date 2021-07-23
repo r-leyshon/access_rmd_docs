@@ -26,6 +26,10 @@ knitr::opts_chunk$set(echo = TRUE)
 Click the image to view the full check on wave.webaim.org, opens in new window.
 
 
+<a href="https://wave.webaim.org/report#/https://datasciencecampus.github.io/accessrmd/tests/testfiles/accessrmd/test.html" target="_blank"><img src="../www/accessrmd.png" alt="Accessibility check of an rmarkdown output modified by acessrmd, showing no errors or warnings."></a>
+Click the image to view the full check on wave.webaim.org, opens in new window.
+
+
 ***
 
 ## Functions Gallery
