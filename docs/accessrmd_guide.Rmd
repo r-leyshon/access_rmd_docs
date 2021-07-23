@@ -113,8 +113,14 @@ attribute value (filename).
 A continuous deployment workflow has been employed in the development of
 {accessrmd}, using [GitHub Actions](https://github.com/features/actions).
 
-This workflow has allowed me to efficiently adapt the package modules while
-ensuring the integrity of 
+This workflow has allowed efficient adaptation of the package modules while
+ensuring the integrity of the outputs and conditional behaviours.
+
+CD worfklows for this package include:
+
+* CRAN build checks.
+* Test coverage with [Codecov.](https://app.codecov.io/gh/datasciencecampus/accessrmd)
+* Automated linting.
 
 ***
 
