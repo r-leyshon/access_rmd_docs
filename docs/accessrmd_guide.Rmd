@@ -177,12 +177,28 @@ Below, you can view the test coverage workflow on pushing to the remote.
 <img src="../www/coverage_schedule.png" alt="Viewing the automated coverage checks on GitHub">
 
 
+### Linting
+
+Automated linting using the {lintr} package with GitHub actions is used to help
+ensure code adheres to the tidyverse style guide. Code readability is important
+in assisting collaboration. Data Science Campus guidance is to apply the
+[tidyverse style guide](#tidstyle).
+
+<img src="../www/lint_schedule.png" alt="The accessrmd lint workflow on GitHub">
+
+Perhaps more important than the adopted style is to ensure that code is
+conscientiously commented. Your colleagues and future self will value the effort
+taken in explaining your code.
+
 ## {.unlisted .unnumbered .toc-ignore}
 
 ***
 
 ## References
 <a id="cran" href="https://cran.r-project.org/web/packages/submission_checklist.html" target="_blank">Checklist for CRAN submissions</a>
+<br>
+<br>
+<a id="tidstyle" href="https://style.tidyverse.org/" target="_blank">Tidyverse Style Guide</a>
 <br>
 <br>
 <a id="ukgov" href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag" target="_blank">UK government digital services</a>
@@ -193,8 +209,6 @@ Below, you can view the test coverage workflow on pushing to the remote.
 <br>
 <a id="wcag" href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG2.1 standard Quick Reference</a>
 <br>
-
-
 
 ***
 
