@@ -24,9 +24,9 @@ and [contribute on GitHub](https://github.com/r-leyshon/access_rmd_docs/issues).
 
 {accessrmd} is a package written to help improve the accessibility of Rmarkdown
 documents. The standard Rmarkdown outputs have HTML structural issues that
-result in issues for people using screen readers. The purpose of {accessrmd} is
-to help developers in writing accessible Rmarkdown outputs and in converting
-a back catalogue of Rmarkdown documents in need of accessibility amendments.
+result in problems for people using screen readers. The purpose of {accessrmd}
+is to help developers in writing accessible Rmarkdown documents and in
+converting a back catalogue of documents in need of accessibility amendments.
 
 {accessrmd} is currently limited to `html_output` only. It is not available on
 CRAN yet, but this is the aim once the first release has been published.
@@ -41,8 +41,8 @@ required by all
 [UK government digital services](#ukgov). In order to present HTML checks, I
 will be enlisting the help of the excellent, open-source
 [WAVE accessibility tool](#wave). It doesn't catch everything required for
-AA-compliance, but it's a great way to get started with accessibility audits,
-with lots of helpful explanations for newcomers to WCAG 2.1 compliance.
+AA-compliance, but it's a great way to get started with an accessibility audit,
+including helpful explanations for newcomers to WCAG 2.1 compliance.
 
 The below image shows the output of a WAVE check on the standard Rmarkdown html
 output. As you can see, there are a number of errors and warnings. Click the
@@ -98,12 +98,12 @@ Check any lines for images and return the line numbers and values.
 ### `handle_rmd_path()`
 
 **Not exported.** Helper function.Checks rmd_path exists and that the file
-suffix is correct.
+type is as expected.
 
 ### `sus_alt()`
 
-Check an image for suspicious alt text. Checks if an image's alt text is equal
-to alt attribute placeholder values, including: 'nbsp', 'spacer' and src
+Suspicious alt text - checks if an image's alt text is equal
+to alt attribute placeholder values, including 'nbsp', 'spacer' and the src
 attribute value (filename).
 
 ***
@@ -159,9 +159,8 @@ against misuse cases.
 
 <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tired_actor/video/6912855387788102918" data-video-id="6912855387788102918" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@tired_actor" href="https://www.tiktok.com/@tired_actor">@tired_actor</a> <p><a title="duet" target="_blank" href="https://www.tiktok.com/tag/duet">##duet</a> with @brock1137 no please no <a title="funny" target="_blank" href="https://www.tiktok.com/tag/funny">##funny</a> <a title="welcome2021" target="_blank" href="https://www.tiktok.com/tag/welcome2021">##Welcome2021</a> <a title="2021" target="_blank" href="https://www.tiktok.com/tag/2021">##2021</a> <a title="newyear" target="_blank" href="https://www.tiktok.com/tag/newyear">##newyear</a> <a title="firstpost" target="_blank" href="https://www.tiktok.com/tag/firstpost">##firstpost</a> <a title="viral" target="_blank" href="https://www.tiktok.com/tag/viral">##viral</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">##fyp</a> <a title="foryou" target="_blank" href="https://www.tiktok.com/tag/foryou">##foryou</a> <a title="foryoupage" target="_blank" href="https://www.tiktok.com/tag/foryoupage">##foryoupage</a> <a title="comedy" target="_blank" href="https://www.tiktok.com/tag/comedy">##comedy</a> <a title="crying" target="_blank" href="https://www.tiktok.com/tag/crying">##crying</a> <a title="2020" target="_blank" href="https://www.tiktok.com/tag/2020">##2020</a> <a title="rareaesthetic" target="_blank" href="https://www.tiktok.com/tag/rareaesthetic">##RareAesthetic</a></p> <a target="_blank" title="♬ The Square Hole - Brock" href="https://www.tiktok.com/music/The-Square-Hole-6912243937592068869">♬ The Square Hole - Brock</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
 
-All jokes to the side, ensuring that your functions are safe for well-known 
-misuse cases is vital. This helps mitigate against poor documentation or
-misinterpretation.
+All jokes to the side, ensuring that your functions are safe is vital. This
+helps mitigate against poor documentation and misinterpretation.
 
 >Code coverage gives an indication of the percentage of code lines that are
 exercised when the test battery is run. However, I would advise caution in
@@ -226,12 +225,12 @@ involved in setting up an analytical pipeline using the fantastic [ProjectTempla
 This data pipeline was redeveloped in December 2020 as Brexit approached. It has
 been an important source of road sensor data to help inform the movement of
 traffic around English ports. This redevelopment was requested by the faster
-economic indicators team.
+economic indicators team and the Chief Economist.
 
 The redeveloped pipeline features the querying of the Highways England RESTful
 webTRIS api in parallel using a virtual environment. Additional value beyond the
 MVP was added with a Shiny UI to add data validation and an automated Rmarkdown
-report adding insight on the proportion of site types returning null responses.
+report, adding insight on the proportion of site types returning null responses.
 
 [Code on GitHub](https://github.com/datasciencecampus/road-data-dump/tree/r-pipeline)
 
@@ -265,8 +264,7 @@ Click the image to see Unifyr on shinyapps.io, opens in new window.
 #### Google Mobility Data
 
 This Google Mobility Data application was developed at the start of the Covid-19
-pandemic using data derived by the optical processing of pdf data publications, 
-an innovative approach to improving the accessibility of Google's publications.
+pandemic using data derived by the optical processing of pdf data publications.
 
 The application allows the user to select specified local authority or NHS
 bodies in order to view the time series mobility data.
@@ -274,7 +272,8 @@ bodies in order to view the time series mobility data.
 <a href="https://richleysh84.shinyapps.io/uk_all_trends/" target="_blank">
   <img src="../www/google_mob.png" alt="Google mobility application interface.">
 </a>
-Click the image to see Google mobility data on shinyapps.io, opens in new window.
+Click the image to see Google mobility data on shinyapps.io, opens in new
+window.
 
 ***
 
@@ -300,8 +299,8 @@ window.
 This app was a bit of fun and took very little time. It used some basic language
 processing and geolocation to plot Welsh location names with common prefixes 
 such as "Cwm" or "Aber" on a map. The application used open data published by
-the Welsh Language Commissioner who subsequently approached me to share the
-application codebase with them.
+the Welsh Language Commissioner who subsequently approached me and were very
+interested in the project, leading me to sharing the codebase with them.
 
 <a href="https://richleysh84.shinyapps.io/common_placenames/" target="_blank">
   <img src="../www/common_welsh_names.png" alt="Common Welsh place names application interface.">
@@ -313,10 +312,10 @@ window.
 
 #### Cardiff Tide Levels
 
-This repo visualises LiDar altitude data of Cardiff openly published by Natural
-Resources Wales. Cardiff was selected due to comparatively high data quality and
-population density. The visualisations compare current day high tide altitude
-with a modelled 2 metre sea rise by the year 2100.
+This repo visualises LiDar altitudinal data of Cardiff, openly published by
+Natural Resources Wales. Cardiff was selected due to comparatively high data
+quality and population density. The visualisations compare current day high tide
+altitude with a modelled 2 metre sea rise by the year 2100.
 
 <a href="https://richleysh84.shinyapps.io/cardiff_maps/" target="_blank">
   <img src="../www/cardiff_sealevels.png" alt="Cardiff sea levels map using LiDar data.">
