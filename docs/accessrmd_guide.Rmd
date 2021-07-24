@@ -252,6 +252,45 @@ report, adding insight on the proportion of site types returning null responses.
 
 ***
 
+#### DSC Survey Feedback
+
+Placeholder: Get image of dashboards.
+
+***
+
+
+#### DSC GitHub Scrape
+
+![Code on GitHub](https://github.com/r-leyshon/DSCA_course_catalogue_dev)
+
+In the Summer of 2020 I had been assigned to develop a solution that would
+ensure the team's external website reflected the course status on GitHub. As
+there was much activity in course QA in our backlog, the status of our website
+would become out of date often.
+
+The pipeline I developed interacts with the GitHub REST API to return all
+company repositories prefixed with "DSCA_" (capability repositories). In
+collaboration with the campus faculty, I developed a standardised readme for all
+courses that required metadata fields could be scraped from. 
+
+The resulting table of course repos and metadata is cached on a monthly basis
+to rds. This is then used to detect changes in course catalogue state. If
+the number of course repos changes or a course version is incremented, an
+automated Email using the Gmail API is sent to our internal comms team with a
+summary of the change and an attached csv file including the updated course
+catalogue. This routine is scheduled on a monthly basis using cron.
+
+Placeholder: Get image of automated Emails.
+
+
+***
+
+#### Remote Sensing Wildfires
+
+
+
+***
+
 ### {.unlisted .unnumbered .toc-ignore}
 
 ### Shiny Applications{.tabset}
