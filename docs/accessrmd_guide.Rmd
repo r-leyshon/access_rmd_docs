@@ -86,6 +86,16 @@ a simple ggplot chart and a test image. [Click to see the test Rmarkdown output]
 
 [Click to see the WAVE check](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test.html). Note the errors and warnings.
 
+The issues are caused by the HTML structure and YAML settings. The YAML
+currently looks like this:
+
+```{r, comment=NA}
+lines <- readLines("test.Rmd")
+message(paste(lines[1:6], collapse = "\n"))
+
+```
+
+
 ### `access_head()`
 
 Reads an Rmd file, converting the YAML header to a format that is screen-reader
