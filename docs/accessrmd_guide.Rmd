@@ -84,6 +84,8 @@ Click the image to view the full check on wave.webaim.org, opens in new window.
 In this section, I will be working with a test Rmarkdown document. It contains
 a simple ggplot chart and a test image. [Click to see the test Rmarkdown output](docs/test.html).
 
+[Click to see the WAVE check](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test.html). Note the errors and warnings.
+
 ### `access_head()`
 
 Reads an Rmd file, converting the YAML header to a format that is screen-reader
