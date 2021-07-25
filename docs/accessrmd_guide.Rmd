@@ -36,7 +36,7 @@ CRAN yet, but this is the aim once the first release has been published.
 
 To install the development version:
 
-```{r, message=FALSE}
+```{r, eval=FALSE}
 devtools::install_github("datasciencecampus/accessrmd")
 ```
 
