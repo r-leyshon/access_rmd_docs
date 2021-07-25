@@ -215,9 +215,8 @@ ignored as the alt text is acceptable.
 ```{r}
 sus_alt("sus_alt_test.Rmd")
 ```
-
-
-
+This function helps to quantify the number of alt-related issues within each
+Rmarkdown file.
 
 ***
 
