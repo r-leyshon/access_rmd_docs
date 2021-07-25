@@ -11,6 +11,8 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_chunk$set(comment = NA)
+# allow duplicate chunk names for multiple renders of anon chunks
+options(knitr.duplicate.label = "allow")
 ```
 
 ## Introduction
@@ -92,6 +94,7 @@ currently looks like this:
 
 ```{r}
 lines <- readLines("test.Rmd")
+# Show only the YAML
 message(paste(lines[1:6], collapse = "\n"))
 
 ```
@@ -143,6 +146,7 @@ We can also view the file lines to see how the file was modified.
 
 ```{r}
 lines <- readLines("accessrmd/test.rmd")
+# Show only the head
 message(paste(lines[1:7], collapse = "\n"))
 ```
 
@@ -152,6 +156,42 @@ message(paste(lines[1:7], collapse = "\n"))
 
 Reads in an image and produces the HTML structure expected by web accessibility
 checkers such as WAVE. Also works as a wrapper around {ggplot2} charts.
+
+This function can be used to resolve the remaining issues in the Rmarkdown. 
+Inserting `access_img()` will resolve the chart issue, as it works with
+`ggplot2::last_plot()`.
+
+For images using markdown syntax, replacing the markdown with `access_img()`
+will ensure the image is renderred with the expected alt text value. This is
+important as markdown syntax `![alt](src)` renders unreliably, causing issues
+with duplicated alt text warnings on WAVE.
+
+```{r echo=TRUE, results='hide'}
+# store the correct code lines as length 1 character vectors
+# chart code specifying alt text
+chart <- 'access_img(alt = "Plot of pressure vs temperature.")'
+
+# test image code, specifying alt text and dimensions
+img <- as.character(
+'`r access_img(img = "../www/then-and-now-carole-hersee.jpeg",
+           alt = "BBC Test card then and now.", wid = 800, ht = 450)`')
+# read in the rmd lines
+lines <- readLines("accessrmd/images.rmd")
+# Replace the blank line following ggplot code with access_img
+lines[32] <- chart
+# Replace the inaccessible markdown image with inline r code.
+lines[37] <- img
+# create a new file
+file.create("accessrmd/corrected_images.rmd")
+# write the modified lines
+writeLines(lines, "accessrmd/corrected_images.rmd")
+# render the markdown
+rmarkdown::render("accessrmd/corrected_images.rmd")
+```
+
+[Click to view the output html](docs/accessrmd/corrected_images_html).
+
+[click to view the WAVE check]().
 
 ***
 

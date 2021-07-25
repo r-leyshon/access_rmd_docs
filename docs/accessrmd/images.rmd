@@ -1,0 +1,42 @@
+<html lang="en">
+  <header>
+    <title>Test</title>
+    <h1 id="title toc-ignore">Test</h1>
+    <h2 class="header_h2s">RichardLeyshon</h2>
+    <h2 class="header_h2s">25/07/2021</h2>
+  </header>
+  <body>
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(accessrmd)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure}
+plt <- ggplot(pressure, aes(x = pressure, y = temperature)) +
+  geom_point()
+
+```
+
+## Including Images from disk
+
+![../www/then-and-now-carole-hersee.jpeg](../www/then-and-now-carole-hersee.jpeg)
+  </body>
+</html>
+
+
+
