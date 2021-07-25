@@ -201,6 +201,24 @@ Suspicious alt text - checks if an image's alt text is equal
 to alt attribute placeholder values, including 'nbsp', 'spacer' and the src
 attribute value (filename).
 
+`sus_alt_test.Rmd` contains 3 images, 1 is acceptable and the rest contain
+placeholder alt attribute values.
+
+```{r}
+lines <- readLines("sus_alt_test.Rmd")
+# show the 3 image lines
+lines[c(15,17,19)]
+```
+The first 2 images need to be flagged for adjustment, while the third should be
+ignored as the alt text is acceptable.
+
+```{r}
+sus_alt("sus_alt_test.Rmd")
+```
+
+
+
+
 ***
 
 ### `check_alt_len()`
