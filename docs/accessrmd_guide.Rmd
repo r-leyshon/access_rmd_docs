@@ -131,9 +131,9 @@ list.files("accessrmd", full.names = TRUE)
 rmarkdown::render("accessrmd/test.rmd")
 ```
 
-[Click to view the output of the renderred Rmarkdown](docs/accessrmd/test.html).
+[Click to view the output HTML](docs/accessrmd/test.html).
 
-[Click to view the WAVE report.](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessrmd/test.html)
+[Click to view the WAVE report](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessrmd/test.html).
 
 This function has resolved the following issues:
 
@@ -189,9 +189,9 @@ writeLines(lines, "accessrmd/corrected_images.rmd")
 rmarkdown::render("accessrmd/corrected_images.rmd")
 ```
 
-[Click to view the output html](docs/accessrmd/corrected_images_html).
+[Click to view the output html](docs/accessrmd/corrected_images.html).
 
-[click to view the WAVE check]().
+[Click to view the WAVE check]().
 
 ***
 
