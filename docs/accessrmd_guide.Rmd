@@ -82,7 +82,7 @@ Click the image to view the full check on wave.webaim.org, opens in new window.
 ## Functions Gallery
 
 In this section, I will be working with a test Rmarkdown document. It contains
-a simple ggplot chart and a test image. [Click to see the test Rmarkdown output](test.html).
+a simple ggplot chart and a test image. [Click to see the test Rmarkdown output](docs/test.html).
 
 ### `access_head()`
 
