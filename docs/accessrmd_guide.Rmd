@@ -191,7 +191,7 @@ rmarkdown::render("accessrmd/corrected_images.rmd")
 
 [Click to view the output html](docs/accessrmd/corrected_images.html).
 
-[Click to view the WAVE check]().
+[Click to view the WAVE check](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessrmd/corrected_images.html).
 
 ***
 
