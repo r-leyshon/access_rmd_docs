@@ -1,5 +1,5 @@
 # Any knitted doc files
-/docs/*.html
+/docs/accessrmd_guide.html
 
 # History files
 .Rhistory
