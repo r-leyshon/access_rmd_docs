@@ -1,11 +1,11 @@
 ---
 title: "Test"
 author: "Richard Leyshon"
-date: "`r format(Sys.Date(), '%d %B %Y')`"
+date: "25/07/2021"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(ggplot2)
 ```

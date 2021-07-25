@@ -10,6 +10,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(comment = NA)
 ```
 
 ## Introduction
@@ -89,7 +90,7 @@ a simple ggplot chart and a test image. [Click to see the test Rmarkdown output]
 The issues are caused by the HTML structure and YAML settings. The YAML
 currently looks like this:
 
-```{r, comment=NA}
+```{r}
 lines <- readLines("test.Rmd")
 message(paste(lines[1:6], collapse = "\n"))
 
@@ -100,6 +101,34 @@ message(paste(lines[1:6], collapse = "\n"))
 
 Reads an Rmd file, converting the YAML header to a format that is screen-reader
 friendly.
+
+Most of the issues with the test Rmarkdown can be fixed with this single
+function. We just need to call it and specify a few parameters:
+
+* `rmd_path` is the relative path to the Rmarkdown.
+* `lan` value will be used to set the HTML lang attribute value. I'll specify
+"en" for English.
+* `inplace = FALSE` (the default) will ensure the original Rmd doesn't get
+overwritten.
+
+
+```{r warning=FALSE}
+access_head(rmd_path = "test.rmd", lan = "en")
+```
+
+`access_head()` created an `accessrmd` directory with an adjusted rmd.
+
+```{r}
+list.files("accessrmd", full.names = TRUE)
+```
+
+```{r include=FALSE}
+# render the output
+rmarkdown::render("accessrmd/test.rmd")
+```
+
+[Click to view the output of the renderred Rmarkdown](docs/accessrmd/test.html).
+
 
 ### `access_img()`
 
