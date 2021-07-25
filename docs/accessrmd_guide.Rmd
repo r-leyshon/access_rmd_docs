@@ -312,6 +312,23 @@ Below, you can view the test coverage workflow on pushing to the remote.
 
 <img src="../www/coverage_schedule.png" alt="Viewing the automated coverage checks on GitHub">
 
+As this package involves some file operations, writing to and reading from disk
+is required in order to test the functions. Writing to disk is not allowed by
+CRAN policies in any test, example or gist. In order to overcome this, a nuanced
+approach is required as the {testthat} approach executes testfiles within a
+temporary directory. 
+
+```{r, eval=FALSE}
+# store the current wd in global scope and setwd to tempdir
+with(globalenv(), {
+  .old_wd <- setwd(tempdir())
+})
+```
+
+Then by creating and writing dependencies to `tempfile()`, execution of the
+tests can be underaken without the risk of any detritus being left behind on
+disk.
+
 
 ### Linting
 
