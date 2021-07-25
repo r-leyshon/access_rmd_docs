@@ -31,6 +31,19 @@ converting a back catalogue of documents in need of accessibility amendments.
 {accessrmd} is currently limited to `html_output` only. It is not available on
 CRAN yet, but this is the aim once the first release has been published.
 
+To install the development version:
+
+```{r, message=FALSE}
+devtools::install_github("datasciencecampus/accessrmd")
+```
+
+To attach the package:
+
+```{r, message=FALSE}
+library(accessrmd)
+```
+
+
 ***
 
 ### What problem does it solve?
@@ -67,6 +80,9 @@ Click the image to view the full check on wave.webaim.org, opens in new window.
 ***
 
 ## Functions Gallery
+
+In this section, I will be working with a test Rmarkdown document. It contains
+a simple ggplot chart and a test image. [Click to see the test Rmarkdown output](test.html).
 
 ### `access_head()`
 
