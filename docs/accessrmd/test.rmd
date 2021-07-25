@@ -30,6 +30,7 @@ ggplot(pressure, aes(x = pressure, y = temperature)) +
   geom_point()
 
 ```
+
 ## Including Images from disk
 
 ![../www/then-and-now-carole-hersee.jpeg](../www/then-and-now-carole-hersee.jpeg)</body>

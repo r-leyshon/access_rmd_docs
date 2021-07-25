@@ -129,6 +129,22 @@ rmarkdown::render("accessrmd/test.rmd")
 
 [Click to view the output of the renderred Rmarkdown](docs/accessrmd/test.html).
 
+[Click to view the WAVE report.](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessrmd/test.html)
+
+This function has resolved the following issues:
+
+* Language missing or invalid
+* No page regions
+* Skipped heading level
+
+The remaining errors or warnings are related to the chart and image.
+We can also view the file lines to see how the file was modified.
+
+```{r}
+lines <- readLines("accessrmd/test.rmd")
+message(paste(lines[1:7], collapse = "\n"))
+```
+
 
 ### `access_img()`
 
