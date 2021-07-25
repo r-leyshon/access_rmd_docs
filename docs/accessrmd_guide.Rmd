@@ -195,21 +195,20 @@ rmarkdown::render("accessrmd/corrected_images.rmd")
 
 ***
 
+### `sus_alt()`
+
+Suspicious alt text - checks if an image's alt text is equal
+to alt attribute placeholder values, including 'nbsp', 'spacer' and the src
+attribute value (filename).
+
+***
+
 ### `check_alt_len()`
 
 In development.
 
-***
+A function to check alt value lengths against language-specific thresholds.
 
-### `detect_html_lang()`
-
-In development.
-
-***
-
-### `find_all_alts()`
-
-In development.
 
 ***
 
@@ -227,13 +226,6 @@ type is as expected.
 
 ***
 
-### `sus_alt()`
-
-Suspicious alt text - checks if an image's alt text is equal
-to alt attribute placeholder values, including 'nbsp', 'spacer' and the src
-attribute value (filename).
-
-***
 
 ## Github Actions{.tabset}
 
