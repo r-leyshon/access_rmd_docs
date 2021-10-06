@@ -593,6 +593,8 @@ window.
 
 ***
 
-#### Testing TOC Float
+### Testing TOC Float
 
 [toc float test](./docs/test_toc.html)
+
+[hybrid toc float test](./docs/test_hybrid.html)

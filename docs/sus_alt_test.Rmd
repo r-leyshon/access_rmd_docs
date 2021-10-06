@@ -2,7 +2,9 @@
 title: "sus_alt_test"
 author: "Richard Leyshon"
 date: "25/07/2021"
-output: html_document
+output:
+    html_document:
+      lang: "en"
 ---
 
 ```{r setup, include=FALSE}
