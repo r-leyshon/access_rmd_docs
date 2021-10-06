@@ -1,9 +1,9 @@
 <html lang="en">
   <header>
-    <title>Test</title>
-    <h1 id="title toc-ignore">Test</h1>
-    <h2 class="header_h2s">RichardLeyshon</h2>
-    <h2 class="header_h2s">25/07/2021</h2>
+    <title> Test</title>
+    <h1 id="title toc-ignore"> Test</h1>
+    <h2 class="header_h2s"> Richard Leyshon</h2>
+    <h2 class="header_h2s"> 25/07/2021</h2>
   </header>
   <body>
 ```{r, include=FALSE}

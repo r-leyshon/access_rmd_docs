@@ -590,3 +590,9 @@ window.
 <br>
 <a id="wcag" href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG2.1 standard Quick Reference</a>
 <br>
+
+***
+
+#### Testing TOC Float
+
+[toc float test](./docs/test_toc.html)
