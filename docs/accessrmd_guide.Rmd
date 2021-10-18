@@ -17,8 +17,6 @@ options(knitr.duplicate.label = "allow")
 
 ## Introduction
 
-<a href="docs/pres_format.html" target="_blank">View in presentation format (opens in new window)</a>.
-
 ### At A Glance
 
 {accessrmd} is currently in development. If you discover bugs or improvements, 
