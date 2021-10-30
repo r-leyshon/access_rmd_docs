@@ -247,12 +247,6 @@ type is as expected.
 <a id="cran" href="https://cran.r-project.org/web/packages/submission_checklist.html" target="_blank">Checklist for CRAN submissions</a>
 <br>
 <br>
-<a href="https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms" target="_blank">NASA Fire Information for Resource Management System</a>
-<br>
-<br>
-<a id="tidstyle" href="https://style.tidyverse.org/" target="_blank">Tidyverse Style Guide</a>
-<br>
-<br>
 <a id="ukgov" href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag" target="_blank">UK government digital services</a>
 <br>
 <br>
