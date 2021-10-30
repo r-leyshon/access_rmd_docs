@@ -1,13 +1,18 @@
 ---
-title: "A Guide To 'accessrmd'."
-author: "Richard Leyshon"
-date: "`r format(Sys.Date(), '%d %B %Y')`"
 output:
-  html_document:
-    toc: true
-    toc_float: true
+    html_document:
+      toc: true
+      toc_float: true
 ---
-
+<html lang="en">
+<header>
+  <meta charset="utf-8"/>
+  <title>A Guide To 'accessrmd'.</title>
+  <h1 class="title toc-ignore">A Guide To 'accessrmd'.</h1>
+  <h2 class="author toc-ignore">Richard Leyshon</h2>
+  <h2 class="date toc-ignore">`r format(Sys.Date(), '%d %B %Y')`</h2>
+</header>
+<body>
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_chunk$set(comment = NA)
@@ -64,7 +69,7 @@ output. As you can see, there are a number of errors and warnings. Click the
 image for more detail.
 
 <a href="https://wave.webaim.org/report#/https://datasciencecampus.github.io/accessrmd/tests/testfiles/test.html" target="_blank">
-  <img src="../www/test_rmd.png" alt="Accessibility check of a standard rmarkdown output showing errors & warnings.">
+  <img src="../www/test_rmd.png" alt="Accessibility check of a standard rmarkdown output showing errors &amp; warnings.">
 </a>
 Click the image to view the full check on wave.webaim.org, opens in new window.
 
@@ -256,4 +261,5 @@ type is as expected.
 <a id="wcag" href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG2.1 standard Quick Reference</a>
 <br>
 
-***
+***</body>
+</html>
