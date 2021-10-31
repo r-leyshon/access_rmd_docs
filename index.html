@@ -310,11 +310,9 @@ output: html_document
 <pre class="r"><code>access_head(rmd_path = &quot;test.rmd&quot;, lan = &quot;en&quot;)</code></pre>
 <pre><code>Setting html lan to en</code></pre>
 <pre><code>Writing file to accessrmd_test.rmd</code></pre>
-<p><code>access_head()</code> created an <code>accessrmd</code> directory with an adjusted rmd.</p>
-<pre class="r"><code>list.files(&quot;accessrmd&quot;, full.names = TRUE)</code></pre>
-<pre><code>[1] &quot;accessrmd/corrected_images.html&quot; &quot;accessrmd/corrected_images.rmd&quot; 
-[3] &quot;accessrmd/images.html&quot;           &quot;accessrmd/images.rmd&quot;           
-[5] &quot;accessrmd/test.html&quot;             &quot;accessrmd/test.rmd&quot;             </code></pre>
+<p><code>access_head()</code> created an adjusted rmd with the filename prefix “accessrmd_”.</p>
+<pre class="r"><code>file.exists(&quot;accessrmd_test.rmd&quot;)</code></pre>
+<pre><code>[1] TRUE</code></pre>
 <p><a href="docs/accessrmd/test.html">Click to view the output HTML</a>.</p>
 <p><a href="https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessrmd/test.html">Click to view the WAVE report</a>.</p>
 <p>This function has resolved the following issues:</p>
@@ -324,7 +322,7 @@ output: html_document
 <li>Skipped heading level</li>
 </ul>
 <p>The remaining errors or warnings are related to the chart and image. We can also view the file lines to see how the file was modified.</p>
-<pre class="r"><code>lines &lt;- readLines(&quot;accessrmd/test.rmd&quot;)
+<pre class="r"><code>lines &lt;- readLines(&quot;accessrmd_test.rmd&quot;)
 # Show only the head
 message(paste(lines[1:7], collapse = &quot;\n&quot;))</code></pre>
 <pre><code>
@@ -350,26 +348,26 @@ img &lt;- as.character(
 &#39;`r access_img(img = &quot;../www/then-and-now-carole-hersee.jpeg&quot;,
            alt = &quot;BBC Test card then and now.&quot;, wid = 800, ht = 450)`&#39;)
 # read in the rmd lines
-lines &lt;- readLines(&quot;accessrmd/images.rmd&quot;)
+lines &lt;- readLines(&quot;images.rmd&quot;)
 # Replace the blank line following ggplot code with access_img
 lines[32] &lt;- chart
 # Replace the inaccessible markdown image with inline r code.
 lines[37] &lt;- img
 # create a new file
-file.create(&quot;accessrmd/corrected_images.rmd&quot;)
+file.create(&quot;accesible_images.rmd&quot;)
 # write the modified lines
-writeLines(lines, &quot;accessrmd/corrected_images.rmd&quot;)
+writeLines(lines, &quot;accesible_images.rmd&quot;)
 # render the markdown
-rmarkdown::render(&quot;accessrmd/corrected_images.rmd&quot;)</code></pre>
+rmarkdown::render(&quot;accesible_images.rmd&quot;)</code></pre>
 <pre><code>
 
-processing file: corrected_images.rmd</code></pre>
+processing file: accesible_images.rmd</code></pre>
 <pre><code>img derived from disk.</code></pre>
-<pre><code>output file: corrected_images.knit.md</code></pre>
+<pre><code>output file: accesible_images.knit.md</code></pre>
 <pre><code>
-Output created: corrected_images.html</code></pre>
-<p><a href="docs/accessrmd/corrected_images.html">Click to view the output html</a>.</p>
-<p><a href="https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessrmd/corrected_images.html">Click to view the WAVE check</a>.</p>
+Output created: accesible_images.html</code></pre>
+<p><a href="docs/accesible_images.html">Click to view the output html</a>.</p>
+<p><a href="https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessible_images.html">Click to view the WAVE check</a>.</p>
 <hr />
 </div>
 <div id="sus_alt" class="section level3">
