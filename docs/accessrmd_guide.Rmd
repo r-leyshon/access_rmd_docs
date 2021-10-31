@@ -186,11 +186,11 @@ lines[32] <- chart
 # Replace the inaccessible markdown image with inline r code.
 lines[37] <- img
 # create a new file
-file.create("accessrmd/corrected_images.rmd")
+file.create("accessrmd_corrected_images.rmd")
 # write the modified lines
-writeLines(lines, "accessrmd/corrected_images.rmd")
+writeLines(lines, "accessrmd_corrected_images.rmd")
 # render the markdown
-rmarkdown::render("accessrmd/corrected_images.rmd")
+rmarkdown::render("accessrmd_corrected_images.rmd")
 ```
 
 [Click to view the output html](docs/accessrmd/corrected_images.html).
