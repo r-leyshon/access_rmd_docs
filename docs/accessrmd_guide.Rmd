@@ -3,16 +3,45 @@ output:
     html_document:
       toc: true
       toc_float: true
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
+
 <html lang="en">
+
 <header>
-  <meta charset="utf-8"/>
-  <title>A Guide To 'accessrmd'.</title>
-  <h1 class="title toc-ignore">A Guide To 'accessrmd'.</h1>
-  <h2 class="author toc-ignore">Richard Leyshon</h2>
-  <h2 class="date toc-ignore">`r format(Sys.Date(), '%d %B %Y')`</h2>
+
+<meta charset="utf-8"/>
+
+<title>
+
+A Guide To 'accessrmd'.
+
+</title>
+
+<h1 class="title toc-ignore">
+
+A Guide To 'accessrmd'.
+
+</h1>
+
+<h2 class="author toc-ignore">
+
+Richard Leyshon
+
+</h2>
+
+<h2 class="date toc-ignore">
+
+`r format(Sys.Date(), '%d %B %Y')`
+
+</h2>
+
 </header>
+
 <body>
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_chunk$set(comment = NA)
@@ -24,19 +53,22 @@ options(knitr.duplicate.label = "allow")
 
 ### At A Glance
 
-{accessrmd} is currently in development. If you discover bugs or improvements, 
-please review the
-[code of conduct](https://github.com/datasciencecampus/accessrmd/blob/main/CODE_OF_CONDUCT.md)
-and [contribute on GitHub](https://github.com/r-leyshon/access_rmd_docs/issues).
+{accessrmd} is currently in development. If you discover bugs or
+improvements, please review the [code of
+conduct](https://github.com/datasciencecampus/accessrmd/blob/main/CODE_OF_CONDUCT.md)
+and [contribute on
+GitHub](https://github.com/r-leyshon/access_rmd_docs/issues).
 
-{accessrmd} is a package written to help improve the accessibility of Rmarkdown
-documents. The standard Rmarkdown outputs have HTML structural issues that
-result in problems for people using screen readers. The purpose of {accessrmd}
-is to help developers in writing accessible Rmarkdown documents and in
-converting a back catalogue of documents in need of accessibility amendments.
+{accessrmd} is a package written to help improve the accessibility of
+Rmarkdown documents. The standard Rmarkdown outputs have HTML structural
+issues that result in problems for people using screen readers. The
+purpose of {accessrmd} is to help developers in writing accessible
+Rmarkdown documents and in converting a back catalogue of documents in
+need of accessibility amendments.
 
-{accessrmd} is currently limited to `html_output` only. It is not available on
-CRAN yet, but this is the aim once the first release has been published.
+{accessrmd} is currently limited to `html_output` only. It is not
+available on CRAN yet, but this is the aim once the first release has
+been published.
 
 To install the development version:
 
@@ -50,48 +82,49 @@ To attach the package:
 library(accessrmd)
 ```
 
-
 ***
 
 ### What problem does it solve?
 
-The HTML structure of standard rmarkdown outputs are not AA
-[WCAG2.1 standard](#wcag). AA is the standard
-required by all
-[UK government digital services](#ukgov). In order to present HTML checks, I
-will be enlisting the help of the excellent, open-source
-[WAVE accessibility tool](#wave). It doesn't catch everything required for
-AA-compliance, but it's a great way to get started with an accessibility audit,
+The HTML structure of standard rmarkdown outputs are not AA [WCAG2.1
+standard](#wcag). AA is the standard required by all [UK government
+digital services](#ukgov). In order to present HTML checks, I will be
+enlisting the help of the excellent, open-source [WAVE accessibility
+tool](#wave). It doesn't catch everything required for AA-compliance,
+but it's a great way to get started with an accessibility audit,
 including helpful explanations for newcomers to WCAG 2.1 compliance.
 
-The below image shows the output of a WAVE check on the standard Rmarkdown html
-output. As you can see, there are a number of errors and warnings. Click the
-image for more detail.
+The below image shows the output of a WAVE check on the standard
+Rmarkdown html output. As you can see, there are a number of errors and
+warnings. Click the image for more detail.
 
 <a href="https://wave.webaim.org/report#/https://datasciencecampus.github.io/accessrmd/tests/testfiles/test.html" target="_blank">
-  <img src="../www/test_rmd.png" alt="Accessibility check of a standard rmarkdown output showing errors &amp; warnings.">
-</a>
-Click the image to view the full check on wave.webaim.org, opens in new window.
+<img src="../www/test_rmd.png" alt="Accessibility check of a standard rmarkdown output showing errors &amp; warnings."/>
+</a> Click the image to view the full check on wave.webaim.org, opens in
+new window.
 
-By executing a few functions from the {accessrmd} package, the html format
-issues can be easily remedied, without the developer needing to write any HTML.
-Please observe the output of an Rmarkdown which has been adjusted by {accessrmd}
-functions (again, you can click for an interactive check):
+By executing a few functions from the {accessrmd} package, the html
+format issues can be easily remedied, without the developer needing to
+write any HTML. Please observe the output of an Rmarkdown which has been
+adjusted by {accessrmd} functions (again, you can click for an
+interactive check):
 
 <a href="https://wave.webaim.org/report#/https://datasciencecampus.github.io/accessrmd/tests/testfiles/accessrmd/test.html" target="_blank">
-  <img src="../www/accessrmd.png" alt="Accessibility check of an rmarkdown output modified by acessrmd, showing no errors or warnings.">
-</a>
-Click the image to view the full check on wave.webaim.org, opens in new window.
-
+<img src="../www/accessrmd.png" alt="Accessibility check of an rmarkdown output modified by acessrmd, showing no errors or warnings."/>
+</a> Click the image to view the full check on wave.webaim.org, opens in
+new window.
 
 ***
 
 ## Functions Gallery
 
-In this section, I will be working with a test Rmarkdown document. It contains
-a simple ggplot chart and a test image. [Click to see the test Rmarkdown output](docs/test.html).
+In this section, I will be working with a test Rmarkdown document. It
+contains a simple ggplot chart and a test image. [Click to see the test
+Rmarkdown output](docs/test.html).
 
-[Click to see the WAVE check](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test.html). Note the errors and warnings.
+[Click to see the WAVE
+check](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test.html).
+Note the errors and warnings.
 
 The issues are caused by the HTML structure and YAML settings. The YAML
 currently looks like this:
@@ -107,24 +140,24 @@ message(paste(lines[1:6], collapse = "\n"))
 
 ### `access_head()`
 
-Reads an Rmd file, converting the YAML header to a format that is screen-reader
-friendly.
+Reads an Rmd file, converting the YAML header to a format that is
+screen-reader friendly.
 
 Most of the issues with the test Rmarkdown can be fixed with this single
 function. We just need to call it and specify a few parameters:
 
-* `rmd_path` is the relative path to the Rmarkdown.
-* `lan` value will be used to set the HTML lang attribute value. I'll specify
-"en" for English.
-* `inplace = FALSE` (the default) will ensure the original Rmd doesn't get
-overwritten.
-
+-   `rmd_path` is the relative path to the Rmarkdown.
+-   `lan` value will be used to set the HTML lang attribute value. I'll
+    specify "en" for English.
+-   `inplace = FALSE` (the default) will ensure the original Rmd doesn't
+    get overwritten.
 
 ```{r warning=FALSE}
 access_head(rmd_path = "test.rmd", lan = "en")
 ```
 
-`access_head()` created an adjusted rmd with the filename prefix "accessrmd_".
+`access_head()` created an adjusted rmd with the filename prefix
+"accessrmd\_".
 
 ```{r}
 file.exists("accessrmd_test.rmd")
@@ -137,16 +170,17 @@ rmarkdown::render("accessrmd_test.rmd")
 
 [Click to view the output HTML](docs/accessrmd/test.html).
 
-[Click to view the WAVE report](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessrmd/test.html).
+[Click to view the WAVE
+report](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessrmd/test.html).
 
 This function has resolved the following issues:
 
-* Language missing or invalid
-* No page regions
-* Skipped heading level
+-   Language missing or invalid
+-   No page regions
+-   Skipped heading level
 
-The remaining errors or warnings are related to the chart and image.
-We can also view the file lines to see how the file was modified.
+The remaining errors or warnings are related to the chart and image. We
+can also view the file lines to see how the file was modified.
 
 ```{r}
 lines <- readLines("accessrmd_test.rmd")
@@ -158,17 +192,18 @@ message(paste(lines[1:7], collapse = "\n"))
 
 ### `access_img()`
 
-Reads in an image and produces the HTML structure expected by web accessibility
-checkers such as WAVE. Also works as a wrapper around {ggplot2} charts.
+Reads in an image and produces the HTML structure expected by web
+accessibility checkers such as WAVE. Also works as a wrapper around
+{ggplot2} charts.
 
-This function can be used to resolve the image-related issues in the Rmarkdown. 
-Inserting `access_img()` will resolve the chart issue, as it works with
-`ggplot2::last_plot()`.
+This function can be used to resolve the image-related issues in the
+Rmarkdown. Inserting `access_img()` will resolve the chart issue, as it
+works with `ggplot2::last_plot()`.
 
-For images using markdown syntax, replacing the markdown with `access_img()`
-will ensure the image is rendered with the expected alt text value. This is
-important as markdown syntax `![alt](src)` renders unreliably, causing issues
-with duplicated alt text warnings on WAVE.
+For images using markdown syntax, replacing the markdown with
+`access_img()` will ensure the image is rendered with the expected alt
+text value. This is important as markdown syntax `![alt](src)` renders
+unreliably, causing issues with duplicated alt text warnings on WAVE.
 
 ```{r echo=TRUE, results='hide'}
 # store the correct code lines as length 1 character vectors
@@ -195,53 +230,80 @@ rmarkdown::render("accesible_images.rmd")
 
 [Click to view the output html](docs/accesible_images.html).
 
-[Click to view the WAVE check](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessible_images.html).
+[Click to view the WAVE
+check](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessible_images.html).
 
 ***
 
 ### `access_rmd()`
+
+Use this function to create a new Rmarkdown document with improved
+accessibility. 
+
+```{r}
+access_rmd("some_file.Rmd", title = "You Need To Provide A Title.", lan = "en")
+
+```
+
+See the output file [some_file.Rmd](docs/some_file.Rmd).
+
+There are more optional parameters to help customise your document.
+
+```{r}
+access_rmd("more_parameters.Rmd", title = "Include a Subtitle and TOC",
+           lan = "en", subtitle = "Some Sensible Subtitle", toc = TRUE)
+```
+
+See the output file [more_parameters.Rmd](docs/more_parameters.Rmd).
+
+You can also use a floating toc (recommended).
+
+```{r}
+access_rmd("toc_float.Rmd", title = "A Floating Toc Document", lan = "en",
+           toc = "float")
+```
+
+See the output file [toc_float.Rmd](docs/toc_float.Rmd).
 
 
 ***
 
 ### `check_urls()`
 
-
 ***
 
 ### `render_toc()`
-
 
 ***
 
 ### `retrieve_rmds()`
 
-
 ***
-
 
 ### `sus_alt()`
 
-Suspicious alt text - checks if an image's alt text is equal
-to alt attribute placeholder values, including 'nbsp', 'spacer' and the src
+Suspicious alt text - checks if an image's alt text is equal to alt
+attribute placeholder values, including 'nbsp', 'spacer' and the src
 attribute value (filename).
 
-`sus_alt_test.Rmd` contains 3 images, 1 is acceptable and the rest contain
-placeholder alt attribute values.
+`sus_alt_test.Rmd` contains 3 images, 1 is acceptable and the rest
+contain placeholder alt attribute values.
 
 ```{r}
 lines <- readLines("sus_alt_test.Rmd")
 # show the 3 image lines
 lines[c(15,17,19)]
 ```
-The first 2 images need to be flagged for adjustment, while the third should be
-ignored as the alt text is acceptable.
+
+The first 2 images need to be flagged for adjustment, while the third
+should be ignored as the alt text is acceptable.
 
 ```{r}
 sus_alt("sus_alt_test.Rmd")
 ```
-This function helps to quantify the number of alt-related issues within each
-Rmarkdown file.
+
+This function helps to quantify the number of alt-related issues within
+each Rmarkdown file.
 
 ***
 
@@ -249,26 +311,24 @@ Rmarkdown file.
 
 In development.
 
-A function to check alt value lengths against language-specific thresholds.
-
+A function to check alt value lengths against language-specific
+thresholds.
 
 ***
 
-
-
 ## Sources
 
-<a id="cran" href="https://cran.r-project.org/web/packages/submission_checklist.html" target="_blank">Checklist for CRAN submissions</a>
-<br>
-<br>
-<a id="ukgov" href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag" target="_blank">UK government digital services</a>
-<br>
-<br>
-<a id="wave" href="https://wave.webaim.org/" target="_blank">WAVE Web Accessibility Evaluation Tool</a>
-<br>
-<br>
-<a id="wcag" href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG2.1 standard Quick Reference</a>
-<br>
+<a id="cran" href="https://cran.r-project.org/web/packages/submission_checklist.html" target="_blank">Checklist
+for CRAN submissions</a> <br> <br>
+<a id="ukgov" href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag" target="_blank">UK
+government digital services</a> <br> <br>
+<a id="wave" href="https://wave.webaim.org/" target="_blank">WAVE Web
+Accessibility Evaluation Tool</a> <br> <br>
+<a id="wcag" href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG2.1
+standard Quick Reference</a> <br>
 
-***</body>
+\*\*\*
+
+</body>
+
 </html>
