@@ -166,7 +166,7 @@ Inserting `access_img()` will resolve the chart issue, as it works with
 `ggplot2::last_plot()`.
 
 For images using markdown syntax, replacing the markdown with `access_img()`
-will ensure the image is renderred with the expected alt text value. This is
+will ensure the image is rendered with the expected alt text value. This is
 important as markdown syntax `![alt](src)` renders unreliably, causing issues
 with duplicated alt text warnings on WAVE.
 
@@ -233,19 +233,7 @@ A function to check alt value lengths against language-specific thresholds.
 
 ***
 
-### `find_all_imgs()`
 
-**Not exported.** Find any markdown or HTML syntax images within read lines.
-Check any lines for images and return the line numbers and values.
-
-***
-
-### `handle_rmd_path()`
-
-**Not exported.** Helper function.Checks rmd_path exists and that the file
-type is as expected.
-
-***
 
 ## Sources
 
