@@ -180,20 +180,20 @@ img <- as.character(
 '`r access_img(img = "../www/then-and-now-carole-hersee.jpeg",
            alt = "BBC Test card then and now.", wid = 800, ht = 450)`')
 # read in the rmd lines
-lines <- readLines("accessrmd/images.rmd")
+lines <- readLines("images.rmd")
 # Replace the blank line following ggplot code with access_img
 lines[32] <- chart
 # Replace the inaccessible markdown image with inline r code.
 lines[37] <- img
 # create a new file
-file.create("accessrmd_corrected_images.rmd")
+file.create("accesible_images.rmd")
 # write the modified lines
-writeLines(lines, "accessrmd_corrected_images.rmd")
+writeLines(lines, "accesible_images.rmd")
 # render the markdown
-rmarkdown::render("accessrmd_corrected_images.rmd")
+rmarkdown::render("accesible_images.rmd")
 ```
 
-[Click to view the output html](docs/accessrmd/corrected_images.html).
+[Click to view the output html](docs/accesible_images.html).
 
 [Click to view the WAVE check](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessrmd/corrected_images.html).
 
