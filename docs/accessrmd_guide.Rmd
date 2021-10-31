@@ -124,15 +124,15 @@ overwritten.
 access_head(rmd_path = "test.rmd", lan = "en")
 ```
 
-`access_head()` created an `accessrmd` directory with an adjusted rmd.
+`access_head()` created an adjusted rmd with the filename prefix "accessrmd_".
 
 ```{r}
-list.files("accessrmd", full.names = TRUE)
+file.exists("accessrmd_test.rmd")
 ```
 
 ```{r include=FALSE}
 # render the output
-rmarkdown::render("accessrmd/test.rmd")
+rmarkdown::render("accessrmd_test.rmd")
 ```
 
 [Click to view the output HTML](docs/accessrmd/test.html).
@@ -149,7 +149,7 @@ The remaining errors or warnings are related to the chart and image.
 We can also view the file lines to see how the file was modified.
 
 ```{r}
-lines <- readLines("accessrmd/test.rmd")
+lines <- readLines("accessrmd_test.rmd")
 # Show only the head
 message(paste(lines[1:7], collapse = "\n"))
 ```
