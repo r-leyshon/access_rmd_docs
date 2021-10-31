@@ -199,6 +199,27 @@ rmarkdown::render("accesible_images.rmd")
 
 ***
 
+### `access_rmd()`
+
+
+***
+
+### `check_urls()`
+
+
+***
+
+### `render_toc()`
+
+
+***
+
+### `retrieve_rmds()`
+
+
+***
+
+
 ### `sus_alt()`
 
 Suspicious alt text - checks if an image's alt text is equal
