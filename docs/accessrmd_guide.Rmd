@@ -241,7 +241,8 @@ Use this function to create a new Rmarkdown document with improved
 accessibility. 
 
 ```{r}
-access_rmd("some_file.Rmd", title = "You Need To Provide A Title.", lan = "en")
+access_rmd("some_file.Rmd", title = "You Need To Provide A Title.", lan = "en",
+           force = TRUE)
 
 ```
 
@@ -251,7 +252,8 @@ There are more optional parameters to help customise your document.
 
 ```{r}
 access_rmd("more_parameters.Rmd", title = "Include a Subtitle and TOC",
-           lan = "en", subtitle = "Some Sensible Subtitle", toc = TRUE)
+           lan = "en", subtitle = "Some Sensible Subtitle", toc = TRUE,
+           force = TRUE)
 ```
 
 See the output file [more_parameters.Rmd](docs/more_parameters.Rmd).
