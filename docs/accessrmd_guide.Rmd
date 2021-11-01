@@ -307,15 +307,6 @@ each Rmarkdown file.
 
 ***
 
-### `check_alt_len()`
-
-In development.
-
-A function to check alt value lengths against language-specific
-thresholds.
-
-***
-
 ## Sources
 
 <a id="cran" href="https://cran.r-project.org/web/packages/submission_checklist.html" target="_blank">Checklist
