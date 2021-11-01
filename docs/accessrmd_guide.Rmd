@@ -273,6 +273,11 @@ See the output file [toc_float.Rmd](docs/toc_float.Rmd).
 Check links within an Rmarkdown document for any urls that respond with an
 error.
 
+```{r}
+check_urls("broken_link.Rmd")
+```
+
+
 ***
 
 ### `retrieve_rmds()`
