@@ -10,7 +10,7 @@ output:
   <title>A Floating Toc Document</title>
   <h1 class="title toc-ignore">A Floating Toc Document</h1>
   <h2 class="author toc-ignore">richardleyshon</h2>
-  <h2 class="date toc-ignore">31 Oct 2021</h2>
+  <h2 class="date toc-ignore">01 Nov 2021</h2>
 </header>
 <body>
 ```{r setup, include=FALSE}

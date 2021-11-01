@@ -256,7 +256,7 @@ div.tocify {
 <p>Richard Leyshon</p>
 </h2>
 <h2 class="date toc-ignore">
-<p>31 October 2021</p>
+<p>01 November 2021</p>
 </h2>
 </header>
 <body>
@@ -373,20 +373,28 @@ Output created: accesible_images.html</code></pre>
 <div id="access_rmd" class="section level3">
 <h3><code>access_rmd()</code></h3>
 <p>Use this function to create a new Rmarkdown document with improved accessibility.</p>
-<pre class="r"><code>access_rmd(&quot;some_file.Rmd&quot;, title = &quot;You Need To Provide A Title.&quot;, lan = &quot;en&quot;)</code></pre>
+<pre class="r"><code>access_rmd(&quot;some_file.Rmd&quot;, title = &quot;You Need To Provide A Title.&quot;, lan = &quot;en&quot;,
+           force = TRUE)</code></pre>
+<pre><code>Warning in access_rmd(&quot;some_file.Rmd&quot;, title = &quot;You Need To Provide A Title.&quot;, : &#39;force&#39; is TRUE.
+Overwriting filenm.</code></pre>
 <pre><code>Setting html lan to en</code></pre>
 <pre><code>Writing file to some_file.Rmd</code></pre>
 <p>See the output file <a href="docs/some_file.Rmd">some_file.Rmd</a>.</p>
 <p>There are more optional parameters to help customise your document.</p>
 <pre class="r"><code>access_rmd(&quot;more_parameters.Rmd&quot;, title = &quot;Include a Subtitle and TOC&quot;,
-           lan = &quot;en&quot;, subtitle = &quot;Some Sensible Subtitle&quot;, toc = TRUE)</code></pre>
+           lan = &quot;en&quot;, subtitle = &quot;Some Sensible Subtitle&quot;, toc = TRUE,
+           force = TRUE)</code></pre>
+<pre><code>Warning in access_rmd(&quot;more_parameters.Rmd&quot;, title = &quot;Include a Subtitle and TOC&quot;, : &#39;force&#39; is
+TRUE. Overwriting filenm.</code></pre>
 <pre><code>Embedding render_toc code chunk</code></pre>
 <pre><code>Setting html lan to en</code></pre>
 <pre><code>Writing file to more_parameters.Rmd</code></pre>
 <p>See the output file <a href="docs/more_parameters.Rmd">more_parameters.Rmd</a>.</p>
 <p>You can also use a floating toc (recommended).</p>
 <pre class="r"><code>access_rmd(&quot;toc_float.Rmd&quot;, title = &quot;A Floating Toc Document&quot;, lan = &quot;en&quot;,
-           toc = &quot;float&quot;)</code></pre>
+           toc = &quot;float&quot;, force = TRUE)</code></pre>
+<pre><code>Warning in access_rmd(&quot;toc_float.Rmd&quot;, title = &quot;A Floating Toc Document&quot;, : &#39;force&#39; is TRUE.
+Overwriting filenm.</code></pre>
 <pre><code>Using toc_float YAML</code></pre>
 <pre><code>Setting html lan to en</code></pre>
 <pre><code>Writing file to toc_float.Rmd</code></pre>
@@ -395,14 +403,16 @@ Output created: accesible_images.html</code></pre>
 </div>
 <div id="check_urls" class="section level3">
 <h3><code>check_urls()</code></h3>
-<hr />
-</div>
-<div id="render_toc" class="section level3">
-<h3><code>render_toc()</code></h3>
+<p>Check links within an Rmarkdown document for any urls that respond with an error.</p>
+<pre class="r"><code>check_urls(&quot;broken_link.Rmd&quot;)</code></pre>
+<pre><code>Checking broken_link.Rmd</code></pre>
+<pre><code>Warning in check_urls(&quot;broken_link.Rmd&quot;): Check lines for broken links:
+12</code></pre>
 <hr />
 </div>
 <div id="retrieve_rmds" class="section level3">
 <h3><code>retrieve_rmds()</code></h3>
+<p>Searches directories for Rmarkdown files. Returns the found Rmd relative paths.</p>
 <hr />
 </div>
 <div id="sus_alt" class="section level3">
@@ -431,17 +441,11 @@ alt text should not be equal to src.</code></pre>
 <p>This function helps to quantify the number of alt-related issues within each Rmarkdown file.</p>
 <hr />
 </div>
-<div id="check_alt_len" class="section level3">
-<h3><code>check_alt_len()</code></h3>
-<p>In development.</p>
-<p>A function to check alt value lengths against language-specific thresholds.</p>
-<hr />
-</div>
 </div>
 <div id="sources" class="section level2">
 <h2>Sources</h2>
 <p><a id="cran" href="https://cran.r-project.org/web/packages/submission_checklist.html" target="_blank">Checklist for CRAN submissions</a> <br> <br> <a id="ukgov" href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag" target="_blank">UK government digital services</a> <br> <br> <a id="wave" href="https://wave.webaim.org/" target="_blank">WAVE Web Accessibility Evaluation Tool</a> <br> <br> <a id="wcag" href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG2.1 standard Quick Reference</a> <br></p>
-<p>***</p>
+<hr />
 </body>
 </html>
 </div>
