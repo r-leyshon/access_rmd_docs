@@ -157,7 +157,7 @@ access_head(rmd_path = "test.rmd", lan = "en")
 ```
 
 `access_head()` created an adjusted rmd with the filename prefix
-"accessrmd\_".
+"accessrmd_".
 
 ```{r}
 file.exists("accessrmd_test.rmd")
@@ -171,7 +171,7 @@ rmarkdown::render("accessrmd_test.rmd")
 [Click to view the output HTML](docs/accessrmd_test.html).
 
 [Click to view the WAVE
-report](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessrmd/test.html).
+report](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessrmd_test.html).
 
 This function has resolved the following issues:
 
