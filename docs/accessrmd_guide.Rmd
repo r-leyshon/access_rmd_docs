@@ -168,7 +168,7 @@ file.exists("accessrmd_test.rmd")
 rmarkdown::render("accessrmd_test.rmd")
 ```
 
-[Click to view the output HTML](docs/accessrmd/test.html).
+[Click to view the output HTML](docs/accessrmd_test.html).
 
 [Click to view the WAVE
 report](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessrmd/test.html).
@@ -246,7 +246,7 @@ access_rmd("some_file.Rmd", title = "You Need To Provide A Title.", lan = "en",
 
 ```
 
-See the output file [some_file.Rmd](docs/some_file.Rmd).
+See the output file [some_file.Rmd](docs/some_file.html).
 
 There are more optional parameters to help customise your document.
 
@@ -256,7 +256,7 @@ access_rmd("more_parameters.Rmd", title = "Include a Subtitle and TOC",
            force = TRUE)
 ```
 
-See the output file [more_parameters.Rmd](docs/more_parameters.Rmd).
+See the output file [more_parameters.Rmd](docs/more_parameters.html).
 
 You can also use a floating toc (recommended).
 
@@ -265,7 +265,7 @@ access_rmd("toc_float.Rmd", title = "A Floating Toc Document", lan = "en",
            toc = "float", force = TRUE)
 ```
 
-See the output file [toc_float.Rmd](docs/toc_float.Rmd).
+See the output file [toc_float.Rmd](docs/toc_float.html).
 
 
 ***
@@ -513,8 +513,6 @@ each Rmarkdown file.
 
 ## Sources
 
-<a id="cran" href="https://cran.r-project.org/web/packages/submission_checklist.html" target="_blank">Checklist
-for CRAN submissions</a> <br> <br>
 <a id="ukgov" href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag" target="_blank">UK
 government digital services</a> <br> <br>
 <a id="wave" href="https://wave.webaim.org/" target="_blank">WAVE Web
