@@ -168,9 +168,9 @@ file.exists("accessrmd_test.rmd")
 rmarkdown::render("accessrmd_test.rmd")
 ```
 
-[Click to view the output HTML](docs/accessrmd_test.html).
+Click to view the [output HTML](docs/accessrmd_test.html).
 
-[Click to view the WAVE
+Click to view the [WAVE
 report](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessrmd_test.html).
 
 This function has resolved the following issues:
@@ -228,9 +228,9 @@ writeLines(lines, "accesible_images.rmd")
 rmarkdown::render("accesible_images.rmd")
 ```
 
-[Click to view the output html](docs/accesible_images.html).
+Click to view the [output html](docs/accesible_images.html).
 
-[Click to view the WAVE
+Click to view the [WAVE
 check](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessible_images.html).
 
 ***
