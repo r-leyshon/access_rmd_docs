@@ -231,7 +231,8 @@ rmarkdown::render("accesible_images.rmd")
 Click to view the [output html](docs/accesible_images.html).
 
 Click to view the [WAVE
-check](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accessible_images.html).
+check](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/accesible_images.html).
+
 
 ***
 
