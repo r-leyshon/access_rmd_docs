@@ -412,7 +412,28 @@ Overwriting filenm.</code></pre>
 </div>
 <div id="retrieve_rmds" class="section level3">
 <h3><code>retrieve_rmds()</code></h3>
-<p>Searches directories for Rmarkdown files. Returns the found Rmd relative paths.</p>
+<p>Searches (recursively) directories for Rmarkdown files. Returns the found Rmd relative paths.</p>
+<pre class="r"><code>rmds &lt;- retrieve_rmds()
+rmds</code></pre>
+<pre><code> [1] &quot;./accesible_images.rmd&quot; &quot;./accessrmd_guide.Rmd&quot;  &quot;./accessrmd_test.rmd&quot;  
+ [4] &quot;./broken_link.Rmd&quot;      &quot;./images.rmd&quot;           &quot;./more_parameters.Rmd&quot; 
+ [7] &quot;./some_file.Rmd&quot;        &quot;./sus_alt_test.Rmd&quot;     &quot;./test.Rmd&quot;            
+[10] &quot;./toc_float.Rmd&quot;       </code></pre>
+<p>This vector of Rmarkdown pathnames can be used for various operations.</p>
+<pre class="r"><code>for (doc in rmds) {
+  print(doc)
+  # try(rmarkdown::render(doc))
+}</code></pre>
+<pre><code>[1] &quot;./accesible_images.rmd&quot;
+[1] &quot;./accessrmd_guide.Rmd&quot;
+[1] &quot;./accessrmd_test.rmd&quot;
+[1] &quot;./broken_link.Rmd&quot;
+[1] &quot;./images.rmd&quot;
+[1] &quot;./more_parameters.Rmd&quot;
+[1] &quot;./some_file.Rmd&quot;
+[1] &quot;./sus_alt_test.Rmd&quot;
+[1] &quot;./test.Rmd&quot;
+[1] &quot;./toc_float.Rmd&quot;</code></pre>
 <hr />
 </div>
 <div id="sus_alt" class="section level3">
