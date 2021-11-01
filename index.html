@@ -434,6 +434,177 @@ rmds</code></pre>
 [1] &quot;./sus_alt_test.Rmd&quot;
 [1] &quot;./test.Rmd&quot;
 [1] &quot;./toc_float.Rmd&quot;</code></pre>
+<p>In the below example, I search a directory for Rmarkdown documents, resulting in 37 found files.</p>
+<pre><code>&gt; rmds &lt;- retrieve_rmds()
+&gt; rmds
+ [1] &quot;./DSCA_DS4Policy_hackathon/hackathon/slides/DS4Policy_hackathon.Rmd&quot;                                       
+ [2] &quot;./DSCA_DS4Policy_hackathon/scripts/DS4Policy_Day1.Rmd&quot;                                                     
+ [3] &quot;./DSCA_DS4Policy_hackathon/scripts/DS4Policy_Day2.Rmd&quot;                                                     
+ [4] &quot;./DSCA_intermediateNLPpython/_preparation/pre_course.Rmd&quot;                                                  
+ [5] &quot;./DSCA_IntroML_Python/_prep/precourse material.Rmd&quot;                                                        
+ [6] &quot;./DSCA_IntroML_Python/_prep/Unsupervised Learning Introduction.Rmd&quot;                                        
+ [7] &quot;./DSCA_ML_QA/_preparation/M1 Fundementals/1.PM_Fundamentals.rmd&quot;                                           
+ [8] &quot;./DSCA_ML_QA/_preparation/M1 Fundementals/1.PM_Fundamentals_slides.rmd&quot;                                    
+ [9] &quot;./DSCA_ML_QA/_preparation/M2 Common Knowledge/2.PM_Common_Knowledge.rmd&quot;                                   
+[10] &quot;./DSCA_ML_QA/_preparation/M2 Common Knowledge/2.PM_Common_Knowledge_slides.rmd&quot;                            
+[11] &quot;./DSCA_ML_QA/_preparation/M3 Ethics/3.PM_Ethical_Applications.rmd&quot;                                         
+[12] &quot;./DSCA_ML_QA/_preparation/M3 Ethics/3.PM_Ethical_Applications_slides.rmd&quot;                                  
+[13] &quot;./DSCA_ML_QA/_preparation/M4 Avoiding Statistical Bias/4.Avoiding_Statistical_Bias.rmd&quot;                    
+[14] &quot;./DSCA_ML_QA/_preparation/M5 Model Interpretability/5.Model_Interpretability.rmd&quot;                          
+[15] &quot;./DSCA_ML_QA/_preparation/M6 Model Maintenance/6.Model_Maintenance.rmd&quot;                                    
+[16] &quot;./DSCA_ML_QA/_preparation/summary.Rmd&quot;                                                                     
+[17] &quot;./DSCA_modular_programming/_preparation/course_content_creation/0.pre_course.Rmd&quot;                          
+[18] &quot;./DSCA_modular_programming/_preparation/course_content_creation/1.course_material.Rmd&quot;                     
+[19] &quot;./DSCA_modular_programming/_preparation/course_content_creation/2.programming_styles.rmd&quot;                  
+[20] &quot;./DSCA_modular_programming/_preparation/population_density_analysis/reports/population_analysis_report.rmd&quot;
+[21] &quot;./DSCA_nlp_application_project/_preparation/instructions.Rmd&quot;                                              
+[22] &quot;./DSCA_NLPWR/NLPWR_part1.Rmd&quot;                                                                              
+[23] &quot;./DSCA_NLPWR/NLPWR_part2.Rmd&quot;                                                                              
+[24] &quot;./DSCA_NLPWR/NLPWR_part3.Rmd&quot;                                                                              
+[25] &quot;./DSCA_NLPWR/NLPWR_part4.Rmd&quot;                                                                              
+[26] &quot;./DSCA_reproducible_reporting/_preparation/course_content_creation/reproducible_reporting.Rmd&quot;             
+[27] &quot;./DSCA_reproducible_reporting/activity/Country_Report.Rmd&quot;                                                 
+[28] &quot;./DSCA_reproducible_reporting/activity/report_evolution/Country_Report_Final.Rmd&quot;                          
+[29] &quot;./DSCA_reproducible_reporting/activity/report_evolution/Country_Report_step_1_2.Rmd&quot;                       
+[30] &quot;./DSCA_reproducible_reporting/activity/report_evolution/Country_Report_step_3_4.Rmd&quot;                       
+[31] &quot;./DSCA_temp_intro_git/intro_to_git.Rmd&quot;                                                                    
+[32] &quot;./DSCA_temp_intro_git/pre_course_software.rmd&quot;                                                             
+[33] &quot;./industry_networks_grads/course_content/instructions.rmd&quot;                                                 
+[34] &quot;./industry_networks_grads/course_content/python/python_solution_extra_exercises.rmd&quot;                       
+[35] &quot;./industry_networks_grads/course_content/python/python_solution_grad_networks.rmd&quot;                         
+[36] &quot;./industry_networks_grads/course_content/r/r_solution_extra_exercises.Rmd&quot;                                 
+[37] &quot;./industry_networks_grads/course_content/r/r_solution_grad_networks.Rmd&quot; </code></pre>
+<p>I recurse over 37 Rmarkdown documents, using the <code>access_head()</code> function to improve their accessibility (if compatible). Using the <code>try()</code> function helps to complete the for loop if exceptions result in errors.</p>
+<pre><code>for (doc in rmds) {
++     print(basename(doc))
++     try(access_head(doc, lan = &quot;en&quot;))
++ }
+[1] &quot;DS4Policy_hackathon.Rmd&quot;
+Error in check_compat(header_txt) : xaringan output is not compatible.
+[1] &quot;DS4Policy_Day1.Rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;DS4Policy_Day2.Rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;pre_course.Rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;precourse material.Rmd&quot;
+Setting html lan to en
+[1] &quot;Unsupervised Learning Introduction.Rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;1.PM_Fundamentals.rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;1.PM_Fundamentals_slides.rmd&quot;
+Error in check_compat(header_txt) : xaringan output is not compatible.
+In addition: Warning messages:
+1: In dir.create(dir_loc) :
+  &#39;.\DSCA_DS4Policy_hackathon\scripts\accessrmd&#39; already exists
+2: In dir.create(dir_loc) :
+  &#39;.\DSCA_IntroML_Python\_prep\accessrmd&#39; already exists
+[1] &quot;2.PM_Common_Knowledge.rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;2.PM_Common_Knowledge_slides.rmd&quot;
+Error in check_compat(header_txt) : xaringan output is not compatible.
+[1] &quot;3.PM_Ethical_Applications.rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;3.PM_Ethical_Applications_slides.rmd&quot;
+Error in check_compat(header_txt) : xaringan output is not compatible.
+[1] &quot;4.Avoiding_Statistical_Bias.rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;5.Model_Interpretability.rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;6.Model_Maintenance.rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;summary.Rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;0.pre_course.Rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;1.course_material.Rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;2.programming_styles.rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;population_analysis_report.rmd&quot;
+Error in access_head(doc, lan = &quot;en&quot;) : 
+  YAML header not found. Have you previously run &#39;access_head()&#39;?
+In addition: Warning messages:
+1: In dir.create(dir_loc) :
+  &#39;.\DSCA_modular_programming\_preparation\course_content_creation\accessrmd&#39; already exists
+2: In dir.create(dir_loc) :
+  &#39;.\DSCA_modular_programming\_preparation\course_content_creation\accessrmd&#39; already exists
+[1] &quot;instructions.Rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;NLPWR_part1.Rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;NLPWR_part2.Rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;NLPWR_part3.Rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;NLPWR_part4.Rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;reproducible_reporting.Rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;Country_Report.Rmd&quot;
+Setting html lan to en
+[1] &quot;Country_Report_Final.Rmd&quot;
+Setting html lan to en
+[1] &quot;Country_Report_step_1_2.Rmd&quot;
+Setting html lan to en
+[1] &quot;Country_Report_step_3_4.Rmd&quot;
+Embedding render_toc code chunk
+Setting html lan to en
+[1] &quot;intro_to_git.Rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;pre_course_software.rmd&quot;
+Setting html lan to en
+[1] &quot;instructions.rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;python_solution_extra_exercises.rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;python_solution_grad_networks.rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;r_solution_extra_exercises.Rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+[1] &quot;r_solution_grad_networks.Rmd&quot;
+Using toc_float YAML
+Setting html lan to en
+Warning messages:
+1: In dir.create(dir_loc) : &#39;.\DSCA_NLPWR\accessrmd&#39; already exists
+2: In dir.create(dir_loc) : &#39;.\DSCA_NLPWR\accessrmd&#39; already exists
+3: In dir.create(dir_loc) : &#39;.\DSCA_NLPWR\accessrmd&#39; already exists
+4: In dir.create(dir_loc) :
+  &#39;.\DSCA_reproducible_reporting\activity\report_evolution\accessrmd&#39; already exists
+5: In dir.create(dir_loc) :
+  &#39;.\DSCA_reproducible_reporting\activity\report_evolution\accessrmd&#39; already exists
+6: In dir.create(dir_loc) :
+  &#39;.\DSCA_temp_intro_git\accessrmd&#39; already exists
+7: In dir.create(dir_loc) :
+  &#39;.\industry_networks_grads\course_content\python\accessrmd&#39; already exists
+8: In dir.create(dir_loc) :
+  &#39;.\industry_networks_grads\course_content\r\accessrmd&#39; already exists</code></pre>
 <hr />
 </div>
 <div id="sus_alt" class="section level3">
