@@ -293,6 +293,15 @@ rmds
 ```
 This vector of Rmarkdown pathnames can be used for various operations.
 
+```{r}
+for (doc in rmds) {
+  print(doc)
+  # try(rmarkdown::render(doc))
+}
+```
+
+
+
 ***
 
 ### `sus_alt()`
