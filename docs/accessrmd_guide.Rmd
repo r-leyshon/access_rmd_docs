@@ -270,13 +270,14 @@ See the output file [toc_float.Rmd](docs/toc_float.Rmd).
 
 ### `check_urls()`
 
-***
-
-### `render_toc()`
+Check links within an Rmarkdown document for any urls that respond with an
+error.
 
 ***
 
 ### `retrieve_rmds()`
+
+Searches directories for Rmarkdown files. Returns the found Rmd relative paths.
 
 ***
 
