@@ -57,7 +57,7 @@ options(knitr.duplicate.label = "allow")
 improvements, please review the [code of
 conduct](https://github.com/datasciencecampus/accessrmd/blob/main/CODE_OF_CONDUCT.md)
 and [contribute on
-GitHub](https://github.com/r-leyshon/access_rmd_docs/issues).
+GitHub](https://github.com/datasciencecampus/accessrmd/issues).
 
 {accessrmd} is a package written to help improve the accessibility of
 Rmarkdown documents. The standard Rmarkdown outputs have HTML structural
