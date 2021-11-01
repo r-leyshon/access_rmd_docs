@@ -284,7 +284,14 @@ check_urls("broken_link.Rmd")
 
 ### `retrieve_rmds()`
 
-Searches directories for Rmarkdown files. Returns the found Rmd relative paths.
+Searches (recursively) directories for Rmarkdown files. Returns the found Rmd
+relative paths.
+
+```{r}
+rmds <- retrieve_rmds()
+rmds
+```
+This vector of Rmarkdown pathnames can be used for various operations.
 
 ***
 
