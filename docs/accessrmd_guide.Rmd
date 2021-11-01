@@ -262,7 +262,7 @@ You can also use a floating toc (recommended).
 
 ```{r}
 access_rmd("toc_float.Rmd", title = "A Floating Toc Document", lan = "en",
-           toc = "float")
+           toc = "float", force = TRUE)
 ```
 
 See the output file [toc_float.Rmd](docs/toc_float.Rmd).
