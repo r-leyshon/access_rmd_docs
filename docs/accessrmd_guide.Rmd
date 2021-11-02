@@ -301,8 +301,8 @@ See the output file [toc_float.Rmd](docs/toc_float.html).
 
 ### `check_urls()`
 
-Check links within an Rmarkdown document for any urls that respond with an
-error.
+Broken links result in accessibility issues for screen reader users. Use `check_urls()` to check links within an Rmarkdown document for any urls that
+respond with an error.
 
 ```{r}
 check_urls("broken_link.Rmd")
