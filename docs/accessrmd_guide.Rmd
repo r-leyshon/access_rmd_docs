@@ -9,38 +9,22 @@ editor_options:
 ---
 
 <html lang="en">
-
-<header>
-
-<meta charset="utf-8"/>
-
-<title>
-
-A Guide To 'accessrmd'.
-
-</title>
-
-<h1 class="title toc-ignore">
-
-A Guide To 'accessrmd'.
-
-</h1>
-
-<h2 class="author toc-ignore">
-
-Richard Leyshon
-
-</h2>
-
-<h2 class="date toc-ignore">
-
-`r format(Sys.Date(), '%d %B %Y')`
-
-</h2>
-
-</header>
-
-<body>
+  <header>
+    <meta charset="utf-8"/>
+    <title>
+      A Guide To 'accessrmd'.
+    </title>
+    <h1 class="title toc-ignore">
+      A Guide To 'accessrmd'.
+    </h1>
+    <h2 class="author toc-ignore">
+      Richard Leyshon
+    </h2>
+    <h2 class="date toc-ignore">
+      `r format(Sys.Date(), '%d %B %Y')`
+    </h2>
+  </header>
+  <body>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
