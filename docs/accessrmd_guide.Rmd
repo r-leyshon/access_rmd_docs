@@ -140,8 +140,9 @@ message(paste(lines[1:6], collapse = "\n"))
 
 ### `access_head()`
 
-Reads an Rmd file, converting the YAML header to a format that is
-screen-reader friendly.
+This is a good place to start if you already have an Rmarkdown document that you
+would like to adjust. Reads an Rmd file, converting the YAML header to a format
+that is screen-reader friendly.
 
 Most of the issues with the test Rmarkdown can be fixed with this single
 function. We just need to call it and specify a few parameters:
