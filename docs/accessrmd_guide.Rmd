@@ -225,20 +225,23 @@ instead of using the more typical (but less reliable) markdown image syntax.
 
 ```{r}
 access_img("../www/then-and-now-carole-hersee.jpeg", alt = "BBC test card then
-           and now")
+           and now", wid = 800, ht = 450)
 ```
 
-
+In the example below, I amend an Rmarkdown document containing the chart and
+image to include the `access_img()` code instead. The resultant HTML documents
+and WAVE accessibility check can be viewed by clicking the links below the code
+chunk.
 
 ```{r echo=TRUE, results='hide'}
-# store the correct code lines as length 1 character vectors
+# store code lines as length 1 character vectors
 # chart code specifying alt text
-chart <- 'access_img(alt = "Plot of pressure vs temperature.")'
+chart <- 'access_img(alt = "Vapour pressure of mercury as a function of temperature.")'
 
 # test image code, specifying alt text and dimensions
 img <- as.character(
 '`r access_img(img = "../www/then-and-now-carole-hersee.jpeg",
-           alt = "BBC Test card then and now.", wid = 800, ht = 450)`')
+           alt = "BBC test card then and now.", wid = 800, ht = 450)`')
 # read in the rmd lines
 lines <- readLines("images.rmd")
 # Replace the blank line following ggplot code with access_img
