@@ -203,8 +203,25 @@ works with `ggplot2::last_plot()`.
 
 For images using markdown syntax, replacing the markdown with
 `access_img()` will ensure the image is rendered with the expected alt
-text value. This is important as markdown syntax `![alt](src)` renders
+text value. This is important, as markdown syntax `![alt](src)` renders
 unreliably, causing issues with duplicated alt text warnings on WAVE.
+
+In the example below, I will create a chart with `ggplot2` and use
+`access_img()` to ensure it is rendered with alt text.
+
+```{r}
+library(ggplot2)
+# create a chart
+chart <- ggplot(data = pressure, mapping = aes(x = temperature, y = pressure)) +
+  geom_point()
+# render with alt text
+access_img(alt = "Vapour pressure of mercury as a function of temperature.")
+
+```
+
+
+
+
 
 ```{r echo=TRUE, results='hide'}
 # store the correct code lines as length 1 character vectors
