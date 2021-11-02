@@ -247,16 +247,16 @@ div.tocify {
 <header>
 <meta charset="utf-8" />
 <title>
-<p>A Guide To ‘accessrmd’.</p>
+A Guide To ‘accessrmd’.
 </title>
 <h1 class="title toc-ignore">
-<p>A Guide To ‘accessrmd’.</p>
+A Guide To ‘accessrmd’.
 </h1>
 <h2 class="author toc-ignore">
-<p>Richard Leyshon</p>
+Richard Leyshon
 </h2>
 <h2 class="date toc-ignore">
-<p>02 November 2021</p>
+02 November 2021
 </h2>
 </header>
 <body>
@@ -648,12 +648,25 @@ alt text should not be empty or equal to &#39;spacer&#39; or &#39;nbsp&#39;.</co
 alt text should not be equal to src.</code></pre>
 <pre><code>[1] 17 19</code></pre>
 <p>This function helps to quantify the number of alt-related issues within each Rmarkdown file.</p>
+<p>This function uses rules from sources below to identify suspicious alt text:</p>
+<blockquote>
+<p><a href="#alt_lim">Alt text length guidance</a> “If the Alt text is greater than 100 characters (English) then it must be shortened or the user must confirm that it is the shortest Alt text possible.”</p>
+</blockquote>
+<blockquote>
+<p>Maximum Alt text Length<br />
+eng 100<br />
+ger 115<br />
+kor 90</p>
+</blockquote>
+<blockquote>
+<p><a href="#plac_alt">placeholder alt text guidance</a> Check each img element and compare its alt attribute value to the list of placeholder values. alt attribute placeholder values are: ‘nbsp’, ‘spacer’ and src attribute value (filename).</p>
+</blockquote>
 <hr />
 </div>
 </div>
 <div id="sources" class="section level2">
 <h2>Sources</h2>
-<p><a id="ukgov" href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag" target="_blank">UK government digital services</a> <br> <br> <a id="wave" href="https://wave.webaim.org/" target="_blank">WAVE Web Accessibility Evaluation Tool</a> <br> <br> <a id="wcag" href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG2.1 standard Quick Reference</a> <br></p>
+<p><a id="ukgov" href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag" target="_blank">UK Gov WCAG guidance.</a> <br> <br> government digital services</a> <br> <br> <a id="wave" href="https://wave.webaim.org/" target="_blank">WAVE Web Accessibility Evaluation Tool</a> <br> <br> <a id="wcag" href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG2.1 standard Quick Reference</a> <br> <br> <a id="alt_lim" href="https://www.w3.org/WAI/GL/WCAG20/tests/test3.html" target="_blank">W3 guidance on alt text length limits.</a><br> <br> <a id="plac_alt" href="https://www.w3.org/WAI/GL/WCAG20/tests/test6.html" target="_blank">W3 guidance on alt text placeholder values.</a><br> <br></p>
 <hr />
 </body>
 </html>
