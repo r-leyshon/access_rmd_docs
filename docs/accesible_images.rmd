@@ -29,13 +29,13 @@ You can also embed plots, for example:
 ```{r pressure}
 plt <- ggplot(pressure, aes(x = pressure, y = temperature)) +
   geom_point()
-access_img(alt = "Plot of pressure vs temperature.")
+access_img(alt = "Vapour pressure of mercury as a function of temperature.")
 ```
 
 ## Including Images from disk
 
 `r access_img(img = "../www/then-and-now-carole-hersee.jpeg",
-           alt = "BBC Test card then and now.", wid = 800, ht = 450)`
+           alt = "BBC test card then and now.", wid = 800, ht = 450)`
   </body>
 </html>
 
