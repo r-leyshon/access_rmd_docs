@@ -219,7 +219,14 @@ access_img(alt = "Vapour pressure of mercury as a function of temperature.")
 
 ```
 
+`access_img()` can also be used to ensure an image sourced from disk is
+displayed correctly for screen reader users. Below, I will source a test image
+instead of using the more typical (but less reliable) markdown image syntax.
 
+```{r}
+access_img("../www/then-and-now-carole-hersee.jpeg", alt = "BBC test card then
+           and now")
+```
 
 
 
