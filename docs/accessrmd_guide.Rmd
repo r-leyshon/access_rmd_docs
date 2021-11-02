@@ -313,14 +313,14 @@ check_urls("broken_link.Rmd")
 
 ### `retrieve_rmds()`
 
-Searches (recursively) directories for Rmarkdown files. Returns the found Rmd
+Searches (recursively) a directory for Rmarkdown files. Returns the found Rmd
 relative paths.
 
 ```{r}
 rmds <- retrieve_rmds()
 rmds
 ```
-This vector of Rmarkdown pathnames can be used for various operations.
+This vector of Rmarkdown path names can be used for various operations.
 
 ```{r}
 for (doc in rmds) {
@@ -329,7 +329,8 @@ for (doc in rmds) {
 }
 ```
 
-In the below example, I search a directory for Rmarkdown documents, resulting in 37 found files.
+In the below example, I search a directory for Rmarkdown documents, resulting in
+37 found files.
 
 ```
 > rmds <- retrieve_rmds()
@@ -373,10 +374,10 @@ In the below example, I search a directory for Rmarkdown documents, resulting in
 [37] "./industry_networks_grads/course_content/r/r_solution_grad_networks.Rmd" 
 ```
 
-I recurse over 37 Rmarkdown documents, using the
+I iterate over 37 Rmarkdown documents, using the
 `access_head()` function to improve their accessibility (if compatible). Using
-the `try()` function helps to complete the for loop if exceptions result in
-errors.
+the `try()` function helps to complete the `for` loop if exceptions result in
+errors (there are a few).
 
 ```
 for (doc in rmds) {
