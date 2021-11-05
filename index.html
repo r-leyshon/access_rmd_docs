@@ -423,9 +423,22 @@ TRUE. Overwriting filenm.</code></pre>
 <p>Searches (recursively) a directory for Rmarkdown files. Returns the found Rmd relative paths.</p>
 <pre class="r"><code>rmds &lt;- retrieve_rmds()
 rmds</code></pre>
-<pre><code>[1] &quot;./accesible_images.rmd&quot; &quot;./accessrmd_guide.Rmd&quot;  &quot;./accessrmd_test.rmd&quot;  
-[4] &quot;./broken_link.Rmd&quot;      &quot;./images.rmd&quot;           &quot;./more_parameters.Rmd&quot; 
-[7] &quot;./some_file.Rmd&quot;        &quot;./sus_alt_test.Rmd&quot;     &quot;./test.Rmd&quot;            </code></pre>
+<pre><code> [1] &quot;./accesible_images.rmd&quot;                     &quot;./accessrmd_guide.Rmd&quot;                     
+ [3] &quot;./accessrmd_test.rmd&quot;                       &quot;./broken_link.Rmd&quot;                         
+ [5] &quot;./images.rmd&quot;                               &quot;./more_parameters.Rmd&quot;                     
+ [7] &quot;./some_file.Rmd&quot;                            &quot;./sus_alt_test.Rmd&quot;                        
+ [9] &quot;./test_highlights/highlight_breezedark.Rmd&quot; &quot;./test_highlights/highlight_default.Rmd&quot;   
+[11] &quot;./test_highlights/highlight_espresso.Rmd&quot;   &quot;./test_highlights/highlight_haddock.Rmd&quot;   
+[13] &quot;./test_highlights/highlight_kate.Rmd&quot;       &quot;./test_highlights/highlight_monochrome.Rmd&quot;
+[15] &quot;./test_highlights/highlight_null.Rmd&quot;       &quot;./test_highlights/highlight_pygments.Rmd&quot;  
+[17] &quot;./test_highlights/highlight_tango.Rmd&quot;      &quot;./test_highlights/highlight_textmate.Rmd&quot;  
+[19] &quot;./test_highlights/highlight_zenburn.Rmd&quot;    &quot;./test_themes/cerulean.Rmd&quot;                
+[21] &quot;./test_themes/cosmo.Rmd&quot;                    &quot;./test_themes/flatly.Rmd&quot;                  
+[23] &quot;./test_themes/journal.Rmd&quot;                  &quot;./test_themes/lumen.Rmd&quot;                   
+[25] &quot;./test_themes/paper.Rmd&quot;                    &quot;./test_themes/readable.Rmd&quot;                
+[27] &quot;./test_themes/sandstone.Rmd&quot;                &quot;./test_themes/simplex.Rmd&quot;                 
+[29] &quot;./test_themes/spacelab.Rmd&quot;                 &quot;./test_themes/united.Rmd&quot;                  
+[31] &quot;./test_themes/yeti.Rmd&quot;                     &quot;./test.Rmd&quot;                                </code></pre>
 <p>This vector of Rmarkdown path names can be used for various operations.</p>
 <pre class="r"><code>for (doc in rmds) {
   print(doc)
@@ -439,6 +452,29 @@ rmds</code></pre>
 [1] &quot;./more_parameters.Rmd&quot;
 [1] &quot;./some_file.Rmd&quot;
 [1] &quot;./sus_alt_test.Rmd&quot;
+[1] &quot;./test_highlights/highlight_breezedark.Rmd&quot;
+[1] &quot;./test_highlights/highlight_default.Rmd&quot;
+[1] &quot;./test_highlights/highlight_espresso.Rmd&quot;
+[1] &quot;./test_highlights/highlight_haddock.Rmd&quot;
+[1] &quot;./test_highlights/highlight_kate.Rmd&quot;
+[1] &quot;./test_highlights/highlight_monochrome.Rmd&quot;
+[1] &quot;./test_highlights/highlight_null.Rmd&quot;
+[1] &quot;./test_highlights/highlight_pygments.Rmd&quot;
+[1] &quot;./test_highlights/highlight_tango.Rmd&quot;
+[1] &quot;./test_highlights/highlight_textmate.Rmd&quot;
+[1] &quot;./test_highlights/highlight_zenburn.Rmd&quot;
+[1] &quot;./test_themes/cerulean.Rmd&quot;
+[1] &quot;./test_themes/cosmo.Rmd&quot;
+[1] &quot;./test_themes/flatly.Rmd&quot;
+[1] &quot;./test_themes/journal.Rmd&quot;
+[1] &quot;./test_themes/lumen.Rmd&quot;
+[1] &quot;./test_themes/paper.Rmd&quot;
+[1] &quot;./test_themes/readable.Rmd&quot;
+[1] &quot;./test_themes/sandstone.Rmd&quot;
+[1] &quot;./test_themes/simplex.Rmd&quot;
+[1] &quot;./test_themes/spacelab.Rmd&quot;
+[1] &quot;./test_themes/united.Rmd&quot;
+[1] &quot;./test_themes/yeti.Rmd&quot;
 [1] &quot;./test.Rmd&quot;</code></pre>
 <p>In the below example, I search a directory for Rmarkdown documents, resulting in 37 found files.</p>
 <pre><code>&gt; rmds &lt;- retrieve_rmds()
@@ -656,6 +692,29 @@ kor 90</p>
 <div id="sources" class="section level2">
 <h2>Sources</h2>
 <p><a id="ukgov" href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag" target="_blank">UK Gov WCAG guidance.</a> <br> <br> government digital services</a> <br> <br> <a id="wave" href="https://wave.webaim.org/" target="_blank">WAVE Web Accessibility Evaluation Tool</a> <br> <br> <a id="wcag" href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG2.1 standard Quick Reference</a> <br> <br> <a id="alt_lim" href="https://www.w3.org/WAI/GL/WCAG20/tests/test3.html" target="_blank">W3 guidance on alt text length limits.</a><br> <br> <a id="plac_alt" href="https://www.w3.org/WAI/GL/WCAG20/tests/test6.html" target="_blank">W3 guidance on alt text placeholder values.</a><br> <br></p>
+<hr />
+</div>
+<div id="testing-themes" class="section level2">
+<h2>Testing themes</h2>
+<p><br><a href="docs/test_themes//cerulean.html">“cerulean.Rmd”</a> <br><a href="docs/test_themes//cosmo.html">“cosmo.Rmd”</a><br />
+<br><a href="docs/test_themes//flatly.html">“flatly.Rmd”</a><br />
+<br><a href="docs/test_themes//journal.html">“journal.Rmd”</a><br />
+<br><a href="docs/test_themes//lumen.html">“lumen.Rmd”</a><br />
+<br><a href="docs/test_themes//paper.html">“paper.Rmd”</a><br />
+<br><a href="docs/test_themes//readable.html">“readable.Rmd”</a><br />
+<br><a href="docs/test_themes//sandstone.html">“sandstone.Rmd”</a> <br><a href="docs/test_themes//simplex.html">“simplex.Rmd”</a><br />
+<br><a href="docs/test_themes//spacelab.html">“spacelab.Rmd”</a> <br><a href="docs/test_themes//united.html">“united.Rmd”</a><br />
+<br><a href="docs/test_themes//yeti.html">“yeti.Rmd”</a></p>
+</div>
+<div id="testing-highlights" class="section level2">
+<h2>Testing highlights</h2>
+<p><br><a href="docs/test_highlights//highlight_breezedark.html">breezedark.Rmd</a> <br><a href="docs/test_highlights//highlight_default.html">default.Rmd</a><br />
+<br><a href="docs/test_highlights//highlight_espresso.html">espresso.Rmd</a> <br><a href="docs/test_highlights//highlight_haddock.html">haddock.Rmd</a><br />
+<br><a href="docs/test_highlights//highlight_kate.html">kate.Rmd</a><br />
+<br><a href="docs/test_highlights//highlight_monochrome.html">monochrome.Rmd</a> <br><a href="docs/test_highlights//highlight_null.html">null.Rmd</a><br />
+<br><a href="docs/test_highlights//highlight_pygments.html">pygments.Rmd</a><br />
+<br><a href="docs/test_highlights//highlight_tango.html">tango.Rmd</a><br />
+<br><a href="docs/test_highlights//highlight_textmate.html">textmate.Rmd</a> <br><a href="docs/test_highlights//highlight_zenburn.html">zenburn.Rmd</a></p>
 <hr />
 </body>
 </html>
