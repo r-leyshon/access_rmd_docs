@@ -256,7 +256,7 @@ A Guide To ‘accessrmd’.
 Richard Leyshon
 </h2>
 <h2 class="date toc-ignore">
-02 November 2021
+05 November 2021
 </h2>
 </header>
 <body>
@@ -407,15 +407,6 @@ TRUE. Overwriting filenm.</code></pre>
 <pre><code>Setting html lan to en</code></pre>
 <pre><code>Writing file to more_parameters.Rmd</code></pre>
 <p>See the output file <a href="docs/more_parameters.html">more_parameters.Rmd</a>.</p>
-<p>You can also use a floating toc (recommended).</p>
-<pre class="r"><code>access_rmd(&quot;toc_float.Rmd&quot;, title = &quot;A Floating Toc Document&quot;, lan = &quot;en&quot;,
-           toc = &quot;float&quot;, force = TRUE)</code></pre>
-<pre><code>Warning in access_rmd(&quot;toc_float.Rmd&quot;, title = &quot;A Floating Toc Document&quot;, : &#39;force&#39; is TRUE.
-Overwriting filenm.</code></pre>
-<pre><code>Using toc_float YAML</code></pre>
-<pre><code>Setting html lan to en</code></pre>
-<pre><code>Writing file to toc_float.Rmd</code></pre>
-<p>See the output file <a href="docs/toc_float.html">toc_float.Rmd</a>.</p>
 <hr />
 </div>
 <div id="check_urls" class="section level3">
@@ -432,10 +423,9 @@ Overwriting filenm.</code></pre>
 <p>Searches (recursively) a directory for Rmarkdown files. Returns the found Rmd relative paths.</p>
 <pre class="r"><code>rmds &lt;- retrieve_rmds()
 rmds</code></pre>
-<pre><code> [1] &quot;./accesible_images.rmd&quot; &quot;./accessrmd_guide.Rmd&quot;  &quot;./accessrmd_test.rmd&quot;  
- [4] &quot;./broken_link.Rmd&quot;      &quot;./images.rmd&quot;           &quot;./more_parameters.Rmd&quot; 
- [7] &quot;./some_file.Rmd&quot;        &quot;./sus_alt_test.Rmd&quot;     &quot;./test.Rmd&quot;            
-[10] &quot;./toc_float.Rmd&quot;       </code></pre>
+<pre><code>[1] &quot;./accesible_images.rmd&quot; &quot;./accessrmd_guide.Rmd&quot;  &quot;./accessrmd_test.rmd&quot;  
+[4] &quot;./broken_link.Rmd&quot;      &quot;./images.rmd&quot;           &quot;./more_parameters.Rmd&quot; 
+[7] &quot;./some_file.Rmd&quot;        &quot;./sus_alt_test.Rmd&quot;     &quot;./test.Rmd&quot;            </code></pre>
 <p>This vector of Rmarkdown path names can be used for various operations.</p>
 <pre class="r"><code>for (doc in rmds) {
   print(doc)
@@ -449,8 +439,7 @@ rmds</code></pre>
 [1] &quot;./more_parameters.Rmd&quot;
 [1] &quot;./some_file.Rmd&quot;
 [1] &quot;./sus_alt_test.Rmd&quot;
-[1] &quot;./test.Rmd&quot;
-[1] &quot;./toc_float.Rmd&quot;</code></pre>
+[1] &quot;./test.Rmd&quot;</code></pre>
 <p>In the below example, I search a directory for Rmarkdown documents, resulting in 37 found files.</p>
 <pre><code>&gt; rmds &lt;- retrieve_rmds()
 &gt; rmds
