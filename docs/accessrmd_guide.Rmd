@@ -271,15 +271,6 @@ access_rmd("more_parameters.Rmd", title = "Include a Subtitle and TOC",
 
 See the output file [more_parameters.Rmd](docs/more_parameters.html).
 
-You can also use a floating toc (recommended).
-
-```{r}
-access_rmd("toc_float.Rmd", title = "A Floating Toc Document", lan = "en",
-           toc = "float", force = TRUE)
-```
-
-See the output file [toc_float.Rmd](docs/toc_float.html).
-
 
 ***
 
