@@ -579,32 +579,33 @@ Links to the WAVE accessibility checks can be found in the [appendix](#append)
 
 ### Styles
 
-[cerulean.Rmd](docs/test_themes//cerulean.html)<br>
-[cosmo.Rmd](docs/test_themes//cosmo.html)<br>
-[flatly.Rmd](docs/test_themes//flatly.html)<br>
-[journal.Rmd](docs/test_themes//journal.html)<br>
-[lumen.Rmd](docs/test_themes//lumen.html)<br>
-[paper.Rmd](docs/test_themes//paper.html)<br>
-[readable.Rmd](docs/test_themes//readable.html)<br>
-[sandstone.Rmd](docs/test_themes//sandstone.html)<br>
-[simplex.Rmd](docs/test_themes//simplex.html)<br>
-[spacelab.Rmd](docs/test_themes//spacelab.html)<br>
-[united.Rmd](docs/test_themes//united.html)<br>
-[yeti.Rmd](docs/test_themes//yeti.html)<br>
+[cerulean.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//cerulean.html)<br>
+[cosmo.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//cosmo.html)<br>
+[flatly.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//flatly.html)<br>
+[journal.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//journal.html)<br>
+[lumen.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//lumen.html)<br>
+[paper.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//paper.html)<br>
+[readable.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//readable.html)<br>
+[sandstone.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//sandstone.html)<br>
+[simplex.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//simplex.html)<br>
+[spacelab.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//spacelab.html)<br>
+[united.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//united.html)<br>
+[yeti.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//yeti.html)<br>
 
 ### Highlights
 
-[breezedark.Rmd](docs/test_highlights//highlight_breezedark.html)<br>
-[default.Rmd](docs/test_highlights//highlight_default.html)<br>
-[espresso.Rmd](docs/test_highlights//highlight_espresso.html)<br>
-[haddock.Rmd](docs/test_highlights//highlight_haddock.html)<br>
-[kate.Rmd](docs/test_highlights//highlight_kate.html)<br>
-[monochrome.Rmd](docs/test_highlights//highlight_monochrome.html)<br>
-[null.Rmd](docs/test_highlights//highlight_null.html)<br>
-[pygments.Rmd](docs/test_highlights//highlight_pygments.html)<br>
-[tango.Rmd](docs/test_highlights//highlight_tango.html)<br>
-[textmate.Rmd](docs/test_highlights//highlight_textmate.html)<br>
-[zenburn.Rmd](docs/test_highlights//highlight_zenburn.html)<br>
+[breezedark.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_highlights//highlight_breezedark.html)<br>
+[default.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_highlights//highlight_default.html)<br>
+[espresso.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_highlights//highlight_espresso.html)<br>
+[haddock.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_highlights//highlight_haddock.html)<br>
+[kate.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_highlights//highlight_kate.html)<br>
+[monochrome.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_highlights//highlight_monochrome.html)<br>
+[null.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_highlights//highlight_null.html)<br>
+[pygments.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_highlights//highlight_pygments.html)<br>
+[tango.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_highlights//highlight_tango.html)<br>
+[textmate.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_highlights//highlight_textmate.html)<br>
+[zenburn.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_highlights//highlight_zenburn.html)<br>
+
 
 ***
 
