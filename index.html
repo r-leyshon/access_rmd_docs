@@ -256,7 +256,7 @@ A Guide To ‘accessrmd’.
 Richard Leyshon
 </h2>
 <h2 class="date toc-ignore">
-05 November 2021
+06 November 2021
 </h2>
 </header>
 <body>
@@ -403,7 +403,7 @@ Overwriting filenm.</code></pre>
            force = TRUE)</code></pre>
 <pre><code>Warning in access_rmd(&quot;more_parameters.Rmd&quot;, title = &quot;Include a Subtitle and TOC&quot;, : &#39;force&#39; is
 TRUE. Overwriting filenm.</code></pre>
-<pre><code>Embedding render_toc code chunk</code></pre>
+<pre><code>Using toc_float YAML</code></pre>
 <pre><code>Setting html lan to en</code></pre>
 <pre><code>Writing file to more_parameters.Rmd</code></pre>
 <p>See the output file <a href="docs/more_parameters.html">more_parameters.Rmd</a>.</p>
@@ -689,35 +689,53 @@ kor 90</p>
 <hr />
 </div>
 </div>
-<div id="sources" class="section level2">
-<h2>Sources</h2>
-<p><a id="ukgov" href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag" target="_blank">UK Gov WCAG guidance.</a> <br> <br> government digital services</a> <br> <br> <a id="wave" href="https://wave.webaim.org/" target="_blank">WAVE Web Accessibility Evaluation Tool</a> <br> <br> <a id="wcag" href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG2.1 standard Quick Reference</a> <br> <br> <a id="alt_lim" href="https://www.w3.org/WAI/GL/WCAG20/tests/test3.html" target="_blank">W3 guidance on alt text length limits.</a><br> <br> <a id="plac_alt" href="https://www.w3.org/WAI/GL/WCAG20/tests/test6.html" target="_blank">W3 guidance on alt text placeholder values.</a><br> <br></p>
+<div id="testing-styles" class="section level2">
+<h2>Testing Styles</h2>
+<p>Rmarkdown comes with some pre-packaged <a href="rmd_style">themes and highlight options</a>.</p>
+<div id="themes" class="section level3">
+<h3>Themes</h3>
+<p>Themes control the appearance of the document’s text and headers, applying specific fonts and colours. On testing the accessibility of these themes, the following accessibility issues were found:</p>
+<ul>
+<li><p><strong>cerulean</strong>: This theme presented very low contrast errors on the use of H4 or H5 headings.</p></li>
+<li><p><strong>simplex</strong>: This theme presented very low contrast errors on thhe use of standard or bold text.</p></li>
+</ul>
+<p>The other built-in themes available were found to present no accessibility issues.</p>
+</div>
+<div id="highlights" class="section level3">
+<h3>Highlights</h3>
+<p>All of the highlight options tested presented various accessibility errors apart from one. It is recommended to specify <code>highlight: null</code>. Note that <strong>this is not the default highlight option</strong>, which presented accessibility errors.</p>
+<p>A summary of the accessibility errors found on testing:</p>
+<ul>
+<li>Empty links used to apply code styling in chunks. Links contain no meaningful text.</li>
+<li>Many of the highlights presented very low contrast errors.</li>
+</ul>
 <hr />
 </div>
-<div id="testing-themes" class="section level2">
-<h2>Testing themes</h2>
-<p><br><a href="docs/test_themes//cerulean.html">“cerulean.Rmd”</a> <br><a href="docs/test_themes//cosmo.html">“cosmo.Rmd”</a><br />
-<br><a href="docs/test_themes//flatly.html">“flatly.Rmd”</a><br />
-<br><a href="docs/test_themes//journal.html">“journal.Rmd”</a><br />
-<br><a href="docs/test_themes//lumen.html">“lumen.Rmd”</a><br />
-<br><a href="docs/test_themes//paper.html">“paper.Rmd”</a><br />
-<br><a href="docs/test_themes//readable.html">“readable.Rmd”</a><br />
-<br><a href="docs/test_themes//sandstone.html">“sandstone.Rmd”</a> <br><a href="docs/test_themes//simplex.html">“simplex.Rmd”</a><br />
-<br><a href="docs/test_themes//spacelab.html">“spacelab.Rmd”</a> <br><a href="docs/test_themes//united.html">“united.Rmd”</a><br />
-<br><a href="docs/test_themes//yeti.html">“yeti.Rmd”</a></p>
 </div>
-<div id="testing-highlights" class="section level2">
-<h2>Testing highlights</h2>
-<p><br><a href="docs/test_highlights//highlight_breezedark.html">breezedark.Rmd</a> <br><a href="docs/test_highlights//highlight_default.html">default.Rmd</a><br />
-<br><a href="docs/test_highlights//highlight_espresso.html">espresso.Rmd</a> <br><a href="docs/test_highlights//highlight_haddock.html">haddock.Rmd</a><br />
-<br><a href="docs/test_highlights//highlight_kate.html">kate.Rmd</a><br />
-<br><a href="docs/test_highlights//highlight_monochrome.html">monochrome.Rmd</a> <br><a href="docs/test_highlights//highlight_null.html">null.Rmd</a><br />
-<br><a href="docs/test_highlights//highlight_pygments.html">pygments.Rmd</a><br />
-<br><a href="docs/test_highlights//highlight_tango.html">tango.Rmd</a><br />
-<br><a href="docs/test_highlights//highlight_textmate.html">textmate.Rmd</a> <br><a href="docs/test_highlights//highlight_zenburn.html">zenburn.Rmd</a></p>
+<div id="sources" class="section level2">
+<h2>Sources</h2>
+<p><a id="ukgov" href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag" target="_blank">UK Gov WCAG guidance.</a> <br> <br> government digital services</a> <br> <br> <a id="wave" href="https://wave.webaim.org/" target="_blank">WAVE Web Accessibility Evaluation Tool</a> <br> <br> <a id="wcag" href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG2.1 standard Quick Reference</a> <br> <br> <a id="alt_lim" href="https://www.w3.org/WAI/GL/WCAG20/tests/test3.html" target="_blank">W3 guidance on alt text length limits.</a><br> <br> <a id="plac_alt" href="https://www.w3.org/WAI/GL/WCAG20/tests/test6.html" target="_blank">W3 guidance on alt text placeholder values.</a><br> <br> <a id="rmd_style" href="https://bookdown.org/yihui/rmarkdown/html-document.html#appearance_and_style" target="_blank">R Markdown: The Definitive Guide, 3.1.4 Appearance and style.</a><br> <br></p>
+<p>Links to the WAVE accessibility checks can be found in the <a href="#append">appendix</a></p>
+<hr />
+</div>
+<div id="append" class="section level2">
+<h2>Appendix</h2>
+<div id="styles" class="section level3">
+<h3>Styles</h3>
+<p><a href="docs/test_themes//cerulean.html">“cerulean.Rmd”</a><br> <a href="docs/test_themes//cosmo.html">“cosmo.Rmd”</a><br> <a href="docs/test_themes//flatly.html">“flatly.Rmd”</a><br> <a href="docs/test_themes//journal.html">“journal.Rmd”</a><br> <a href="docs/test_themes//lumen.html">“lumen.Rmd”</a><br> <a href="docs/test_themes//paper.html">“paper.Rmd”</a><br> <a href="docs/test_themes//readable.html">“readable.Rmd”</a><br> <a href="docs/test_themes//sandstone.html">“sandstone.Rmd”</a><br> <a href="docs/test_themes//simplex.html">“simplex.Rmd”</a><br> <a href="docs/test_themes//spacelab.html">“spacelab.Rmd”</a><br> <a href="docs/test_themes//united.html">“united.Rmd”</a><br> <a href="docs/test_themes//yeti.html">“yeti.Rmd”</a><br></p>
+</div>
+<div id="highlights-1" class="section level3">
+<h3>Highlights</h3>
+<p><a href="docs/test_highlights//highlight_breezedark.html">breezedark.Rmd</a><br> <a href="docs/test_highlights//highlight_default.html">default.Rmd</a><br><br />
+<a href="docs/test_highlights//highlight_espresso.html">espresso.Rmd</a><br> <a href="docs/test_highlights//highlight_haddock.html">haddock.Rmd</a><br><br />
+<a href="docs/test_highlights//highlight_kate.html">kate.Rmd</a><br><br />
+<a href="docs/test_highlights//highlight_monochrome.html">monochrome.Rmd</a><br> <a href="docs/test_highlights//highlight_null.html">null.Rmd</a><br><br />
+<a href="docs/test_highlights//highlight_pygments.html">pygments.Rmd</a><br> <a href="docs/test_highlights//highlight_tango.html">tango.Rmd</a><br><br />
+<a href="docs/test_highlights//highlight_textmate.html">textmate.Rmd</a><br> <a href="docs/test_highlights//highlight_zenburn.html">zenburn.Rmd</a><br></p>
 <hr />
 </body>
 </html>
+</div>
 </div>
 
 

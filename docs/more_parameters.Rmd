@@ -1,4 +1,9 @@
-
+---
+output:
+    html_document:
+      toc: true
+      toc_float: true
+---
 <html lang="en">
 <header>
   <meta charset="utf-8"/>
@@ -6,14 +11,9 @@
   <h1 class="title toc-ignore">Include a Subtitle and TOC</h1>
   <h2 class="subtitle toc-ignore">Some Sensible Subtitle</h2>
   <h3 class="author toc-ignore">richardleyshon</h3>
-  <h3 class="date toc-ignore">05 Nov 2021</h3>
+  <h3 class="date toc-ignore">06 Nov 2021</h3>
 </header>
 <body>
-```{r, echo=FALSE, warning=FALSE}
-library(accessrmd, quietly = TRUE)
-render_toc(basename(knitr::current_input()))
-```
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
