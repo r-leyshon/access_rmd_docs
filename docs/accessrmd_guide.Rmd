@@ -579,18 +579,18 @@ Links to the WAVE accessibility checks can be found in the [appendix](#append)
 
 ### Styles
 
-["cerulean.Rmd"](docs/test_themes//cerulean.html)<br>
-["cosmo.Rmd"](docs/test_themes//cosmo.html)<br>
-["flatly.Rmd"](docs/test_themes//flatly.html)<br>
-["journal.Rmd"](docs/test_themes//journal.html)<br>
-["lumen.Rmd"](docs/test_themes//lumen.html)<br>
-["paper.Rmd"](docs/test_themes//paper.html)<br>
-["readable.Rmd"](docs/test_themes//readable.html)<br>
-["sandstone.Rmd"](docs/test_themes//sandstone.html)<br>
-["simplex.Rmd" ](docs/test_themes//simplex.html)<br>
-["spacelab.Rmd"](docs/test_themes//spacelab.html)<br>
-["united.Rmd"](docs/test_themes//united.html)<br>
-["yeti.Rmd"](docs/test_themes//yeti.html)<br>
+[cerulean.Rmd](docs/test_themes//cerulean.html)<br>
+[cosmo.Rmd](docs/test_themes//cosmo.html)<br>
+[flatly.Rmd](docs/test_themes//flatly.html)<br>
+[journal.Rmd](docs/test_themes//journal.html)<br>
+[lumen.Rmd](docs/test_themes//lumen.html)<br>
+[paper.Rmd](docs/test_themes//paper.html)<br>
+[readable.Rmd](docs/test_themes//readable.html)<br>
+[sandstone.Rmd](docs/test_themes//sandstone.html)<br>
+[simplex.Rmd](docs/test_themes//simplex.html)<br>
+[spacelab.Rmd](docs/test_themes//spacelab.html)<br>
+[united.Rmd](docs/test_themes//united.html)<br>
+[yeti.Rmd](docs/test_themes//yeti.html)<br>
 
 ### Highlights
 
