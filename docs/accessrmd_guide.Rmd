@@ -595,16 +595,16 @@ Links to the WAVE accessibility checks can be found in the [appendix](#append)
 ### Highlights
 
 [breezedark.Rmd](docs/test_highlights//highlight_breezedark.html)<br>
-[default.Rmd](docs/test_highlights//highlight_default.html)<br>   
-[espresso.Rmd](docs/test_highlights//highlight_espresso.html)<br> 
-[haddock.Rmd](docs/test_highlights//highlight_haddock.html)<br>   
-[kate.Rmd](docs/test_highlights//highlight_kate.html)<br>     
+[default.Rmd](docs/test_highlights//highlight_default.html)<br>
+[espresso.Rmd](docs/test_highlights//highlight_espresso.html)<br>
+[haddock.Rmd](docs/test_highlights//highlight_haddock.html)<br>
+[kate.Rmd](docs/test_highlights//highlight_kate.html)<br>
 [monochrome.Rmd](docs/test_highlights//highlight_monochrome.html)<br>
-[null.Rmd](docs/test_highlights//highlight_null.html)<br>      
-[pygments.Rmd](docs/test_highlights//highlight_pygments.html)<br> 
-[tango.Rmd](docs/test_highlights//highlight_tango.html)<br>     
-[textmate.Rmd](docs/test_highlights//highlight_textmate.html)<br> 
-[zenburn.Rmd](docs/test_highlights//highlight_zenburn.html)<br> 
+[null.Rmd](docs/test_highlights//highlight_null.html)<br>
+[pygments.Rmd](docs/test_highlights//highlight_pygments.html)<br>
+[tango.Rmd](docs/test_highlights//highlight_tango.html)<br>
+[textmate.Rmd](docs/test_highlights//highlight_textmate.html)<br>
+[zenburn.Rmd](docs/test_highlights//highlight_zenburn.html)<br>
 
 ***
 
