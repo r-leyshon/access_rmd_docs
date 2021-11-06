@@ -532,6 +532,22 @@ src attribute value (filename).
 
 ***
 
+## Testing Styles
+
+Rmarkdown comes with some pre-packaged [themes and highlight options](rmd_style). 
+
+### Themes
+
+Themes control the appearance of the document's text and headers, applying specific fonts and colours. On testing the accessibility of these themes, the following accessibility issues were found:
+
+* **cerulean**: This theme presented very low contrast errors on the use of H4 or H5 headings.
+
+* **simplex**: This theme presented very low contrast errors on thhe use of standard or bold text.
+
+The other built-in themes available were found to present no accessibility issues.
+
+***
+
 ## Sources
 
 <a id="ukgov" href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag" target="_blank">UK Gov WCAG guidance.</a> <br> <br>
@@ -542,10 +558,15 @@ Accessibility Evaluation Tool</a> <br> <br>
 standard Quick Reference</a> <br> <br>
 <a id="alt_lim" href="https://www.w3.org/WAI/GL/WCAG20/tests/test3.html" target="_blank">W3 guidance on alt text length limits.</a><br> <br>
 <a id="plac_alt" href="https://www.w3.org/WAI/GL/WCAG20/tests/test6.html" target="_blank">W3 guidance on alt text placeholder values.</a><br> <br>
+<a id="rmd_style" href="https://bookdown.org/yihui/rmarkdown/html-document.html#appearance_and_style" target="_blank">R Markdown: The Definitive Guide, 3.1.4 Appearance and style.</a><br> <br>
+
+
 
 ***
 
-## Testing themes
+## Testing Styles
+
+Rmarkdown comes with some pre-packaged [themes and styles](rmd_style). 
 
 <br>["cerulean.Rmd"](docs/test_themes//cerulean.html)
 <br>["cosmo.Rmd"](docs/test_themes//cosmo.html)    
