@@ -4,7 +4,7 @@ author: "R Leyshon"
 date: "05/11/2021"
 output:
   html_document:
-    theme: spacelab
+    theme: cerulean
 ---
 
 ```{r setup, include=FALSE, comment=""}
@@ -36,4 +36,7 @@ vec <- c(1:10)
 print(vec)
 
 ```
+
+`anon inline code`
+`r Sys.Date()`
 

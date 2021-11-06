@@ -37,3 +37,6 @@ print(vec)
 
 ```
 
+`anon inline code`
+`r Sys.Date()`
+
