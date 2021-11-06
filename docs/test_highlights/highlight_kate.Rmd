@@ -4,7 +4,7 @@ author: "R Leyshon"
 date: "05/11/2021"
 output:
   html_document:
-    theme: "kate.Rmd"
+    highlight: "kate.Rmd"
 ---
 
 ```{r setup, include=FALSE, comment=""}
