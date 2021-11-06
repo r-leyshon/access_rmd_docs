@@ -546,6 +546,15 @@ Themes control the appearance of the document's text and headers, applying speci
 
 The other built-in themes available were found to present no accessibility issues.
 
+### Highlights
+
+All of the highlight options tested presented various accessibility errors apart from one. It is recommended to specify `highlight: null`. Note that **this is not the default highlight option**, which presented accessibility errors.  
+
+A summary of the accessibility errors found on testing:
+
+* Empty links used to apply code styling in chunks. Links contain no meaningful text.
+* Many of the highlights presented very low contrast errors.
+
 ***
 
 ## Sources
