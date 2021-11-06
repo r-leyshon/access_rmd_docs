@@ -4,7 +4,7 @@ author: "R Leyshon"
 date: "05/11/2021"
 output:
   html_document:
-    theme: "cerulean"
+    theme: cerulean
 ---
 
 ```{r setup, include=FALSE, comment=""}

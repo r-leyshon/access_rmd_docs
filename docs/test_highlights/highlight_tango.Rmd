@@ -4,7 +4,7 @@ author: "R Leyshon"
 date: "05/11/2021"
 output:
   html_document:
-    highlight: "tango.Rmd"
+    highlight: tango
 ---
 
 ```{r setup, include=FALSE, comment=""}
