@@ -244,7 +244,7 @@ A Guide To ‘accessrmd’.
 Richard Leyshon
 </h2>
 <h2 class="date toc-ignore">
-08 November 2021
+09 November 2021
 </h2>
 </header>
 <body>
@@ -299,6 +299,7 @@ output: html_document
 <pre><code>No theme found. Specifying theme: null</code></pre>
 <pre><code>Setting html lan to en</code></pre>
 <pre><code>Writing file to accessrmd_test.rmd</code></pre>
+<p>Note that this document had no theme set. {accessrmd} has now explicitly set the theme to ‘null’.</p>
 <p><code>access_head()</code> created an adjusted rmd with the filename prefix “accessrmd_”.</p>
 <pre class="r"><code>file.exists(&quot;accessrmd_test.rmd&quot;)</code></pre>
 <pre><code>[1] TRUE</code></pre>
@@ -313,14 +314,22 @@ output: html_document
 <p>The remaining errors or warnings are related to the chart and image. We can also view the file lines to see how the file was modified.</p>
 <pre class="r"><code>lines &lt;- readLines(&quot;accessrmd_test.rmd&quot;)
 # Show only the head
-message(paste(lines[1:7], collapse = &quot;\n&quot;))</code></pre>
+message(paste(lines[1:14], collapse = &quot;\n&quot;))</code></pre>
 <pre><code>---
 output:
     html_document:
       highlight: null
       theme: null
 ---
-&lt;html lang=&quot;en&quot;&gt;</code></pre>
+&lt;html lang=&quot;en&quot;&gt;
+&lt;header&gt;
+  &lt;meta charset=&quot;utf-8&quot;/&gt;
+  &lt;title&gt;Test&lt;/title&gt;
+  &lt;h1 class=&quot;title toc-ignore&quot;&gt;Test&lt;/h1&gt;
+  &lt;h2 class=&quot;author toc-ignore&quot;&gt;Richard Leyshon&lt;/h2&gt;
+  &lt;h2 class=&quot;date toc-ignore&quot;&gt;25/07/2021&lt;/h2&gt;
+&lt;/header&gt;</code></pre>
+<p>In the above output, you can see the approach taken to building styled HTML outputs that do not result in accessibility issues. The highlight option should always be set to null due to accessibility errors with the highlight options. The theme should be null by default, but can also be set to a number of options, refer to the section on <a href="#test-styles">testing styles</a> for more guidance.</p>
 <hr />
 </div>
 <div id="access_img" class="section level3">
@@ -396,7 +405,45 @@ TRUE. Overwriting filenm.</code></pre>
 <pre><code>Setting html lan to en</code></pre>
 <pre><code>Writing file to more_parameters.Rmd</code></pre>
 <p>See the output file <a href="docs/more_parameters.html">more_parameters.Rmd</a>.</p>
+<div id="setting-theme" class="section level4">
+<h4>Setting theme</h4>
+<p>‘access_rmd()’ allows the user to specify which theme should be used to style the text of the rmarkdown document.</p>
+<pre class="r"><code>access_rmd(filenm = &quot;flatly_styling&quot;, title = &quot;Applying the flatly theme&quot;,
+           lan = &quot;en&quot;, force = TRUE, theme = &quot;flatly&quot;)</code></pre>
+<pre><code>Warning in access_rmd(filenm = &quot;flatly_styling&quot;, title = &quot;Applying the flatly theme&quot;, : &#39;force&#39; is
+TRUE. Overwriting filenm.</code></pre>
+<pre><code>Setting html lan to en</code></pre>
+<pre><code>Writing file to flatly_styling.Rmd</code></pre>
+<p>Here is the link to <a href="docs/flatly_styling.html">flatly_styling.html</a></p>
+<p>Note that there are accessibility errors with the simplex and cerulean themes. Attempting to apply these themes results in a warning and setting the theme to null.</p>
+<pre class="r"><code>access_rmd(&quot;attempt_simplex&quot;, title = &quot;Attempting to apply simplex theme&quot;,
+           lan = &quot;en&quot;, force = TRUE, theme = &quot;simplex&quot;)</code></pre>
+<pre><code>Warning in access_rmd(&quot;attempt_simplex&quot;, title = &quot;Attempting to apply simplex theme&quot;, : &#39;force&#39; is
+TRUE. Overwriting filenm.</code></pre>
+<pre><code>Warning in insert_yaml(toc = toc, header = header, text = text, lan = lan, : The simplex theme has known accessibility errors and is
+    not supported by this function.</code></pre>
+<pre><code>Setting html lan to en</code></pre>
+<pre><code>Writing file to attempt_simplex.Rmd</code></pre>
+<p>Here is the link to <a href="docs/attempt_simplex.html">attempt_simplex.html</a>. You should see that null theme has been specified. To confirm this:</p>
+<pre class="r"><code>lin &lt;- readLines(&quot;attempt_simplex.Rmd&quot;)
+# Display header
+lin[1:14]</code></pre>
+<pre><code> [1] &quot;---&quot;                                                                    
+ [2] &quot;output:&quot;                                                                
+ [3] &quot;    html_document:&quot;                                                     
+ [4] &quot;      highlight: null&quot;                                                  
+ [5] &quot;      theme: null&quot;                                                      
+ [6] &quot;---&quot;                                                                    
+ [7] &quot;&lt;html lang=\&quot;en\&quot;&gt;&quot;                                                     
+ [8] &quot;&lt;header&gt;&quot;                                                               
+ [9] &quot;  &lt;meta charset=\&quot;utf-8\&quot;/&gt;&quot;                                            
+[10] &quot;  &lt;title&gt;Attempting to apply simplex theme&lt;/title&gt;&quot;                     
+[11] &quot;  &lt;h1 class=\&quot;title toc-ignore\&quot;&gt;Attempting to apply simplex theme&lt;/h1&gt;&quot;
+[12] &quot;  &lt;h2 class=\&quot;author toc-ignore\&quot;&gt;richardleyshon&lt;/h2&gt;&quot;                  
+[13] &quot;  &lt;h2 class=\&quot;date toc-ignore\&quot;&gt;09 Nov 2021&lt;/h2&gt;&quot;                       
+[14] &quot;&lt;/header&gt;&quot;                                                              </code></pre>
 <hr />
+</div>
 </div>
 <div id="check_urls" class="section level3">
 <h3><code>check_urls()</code></h3>
@@ -413,21 +460,22 @@ TRUE. Overwriting filenm.</code></pre>
 <pre class="r"><code>rmds &lt;- retrieve_rmds()
 rmds</code></pre>
 <pre><code> [1] &quot;./accesible_images.rmd&quot;                     &quot;./accessrmd_guide.Rmd&quot;                     
- [3] &quot;./accessrmd_test.rmd&quot;                       &quot;./broken_link.Rmd&quot;                         
- [5] &quot;./images.rmd&quot;                               &quot;./more_parameters.Rmd&quot;                     
- [7] &quot;./some_file.Rmd&quot;                            &quot;./sus_alt_test.Rmd&quot;                        
- [9] &quot;./test_highlights/highlight_breezedark.Rmd&quot; &quot;./test_highlights/highlight_default.Rmd&quot;   
-[11] &quot;./test_highlights/highlight_espresso.Rmd&quot;   &quot;./test_highlights/highlight_haddock.Rmd&quot;   
-[13] &quot;./test_highlights/highlight_kate.Rmd&quot;       &quot;./test_highlights/highlight_monochrome.Rmd&quot;
-[15] &quot;./test_highlights/highlight_null.Rmd&quot;       &quot;./test_highlights/highlight_pygments.Rmd&quot;  
-[17] &quot;./test_highlights/highlight_tango.Rmd&quot;      &quot;./test_highlights/highlight_textmate.Rmd&quot;  
-[19] &quot;./test_highlights/highlight_zenburn.Rmd&quot;    &quot;./test_themes/cerulean.Rmd&quot;                
-[21] &quot;./test_themes/cosmo.Rmd&quot;                    &quot;./test_themes/flatly.Rmd&quot;                  
-[23] &quot;./test_themes/journal.Rmd&quot;                  &quot;./test_themes/lumen.Rmd&quot;                   
-[25] &quot;./test_themes/paper.Rmd&quot;                    &quot;./test_themes/readable.Rmd&quot;                
-[27] &quot;./test_themes/sandstone.Rmd&quot;                &quot;./test_themes/simplex.Rmd&quot;                 
-[29] &quot;./test_themes/spacelab.Rmd&quot;                 &quot;./test_themes/united.Rmd&quot;                  
-[31] &quot;./test_themes/yeti.Rmd&quot;                     &quot;./test.Rmd&quot;                                </code></pre>
+ [3] &quot;./accessrmd_test.rmd&quot;                       &quot;./attempt_simplex.Rmd&quot;                     
+ [5] &quot;./broken_link.Rmd&quot;                          &quot;./flatly_styling.Rmd&quot;                      
+ [7] &quot;./images.rmd&quot;                               &quot;./more_parameters.Rmd&quot;                     
+ [9] &quot;./some_file.Rmd&quot;                            &quot;./sus_alt_test.Rmd&quot;                        
+[11] &quot;./test_highlights/highlight_breezedark.Rmd&quot; &quot;./test_highlights/highlight_default.Rmd&quot;   
+[13] &quot;./test_highlights/highlight_espresso.Rmd&quot;   &quot;./test_highlights/highlight_haddock.Rmd&quot;   
+[15] &quot;./test_highlights/highlight_kate.Rmd&quot;       &quot;./test_highlights/highlight_monochrome.Rmd&quot;
+[17] &quot;./test_highlights/highlight_null.Rmd&quot;       &quot;./test_highlights/highlight_pygments.Rmd&quot;  
+[19] &quot;./test_highlights/highlight_tango.Rmd&quot;      &quot;./test_highlights/highlight_textmate.Rmd&quot;  
+[21] &quot;./test_highlights/highlight_zenburn.Rmd&quot;    &quot;./test_themes/cerulean.Rmd&quot;                
+[23] &quot;./test_themes/cosmo.Rmd&quot;                    &quot;./test_themes/flatly.Rmd&quot;                  
+[25] &quot;./test_themes/journal.Rmd&quot;                  &quot;./test_themes/lumen.Rmd&quot;                   
+[27] &quot;./test_themes/paper.Rmd&quot;                    &quot;./test_themes/readable.Rmd&quot;                
+[29] &quot;./test_themes/sandstone.Rmd&quot;                &quot;./test_themes/simplex.Rmd&quot;                 
+[31] &quot;./test_themes/spacelab.Rmd&quot;                 &quot;./test_themes/united.Rmd&quot;                  
+[33] &quot;./test_themes/yeti.Rmd&quot;                     &quot;./test.Rmd&quot;                                </code></pre>
 <p>This vector of Rmarkdown path names can be used for various operations.</p>
 <pre class="r"><code>for (doc in rmds) {
   print(doc)
@@ -436,7 +484,9 @@ rmds</code></pre>
 <pre><code>[1] &quot;./accesible_images.rmd&quot;
 [1] &quot;./accessrmd_guide.Rmd&quot;
 [1] &quot;./accessrmd_test.rmd&quot;
+[1] &quot;./attempt_simplex.Rmd&quot;
 [1] &quot;./broken_link.Rmd&quot;
+[1] &quot;./flatly_styling.Rmd&quot;
 [1] &quot;./images.rmd&quot;
 [1] &quot;./more_parameters.Rmd&quot;
 [1] &quot;./some_file.Rmd&quot;
@@ -678,7 +728,7 @@ kor 90</p>
 <hr />
 </div>
 </div>
-<div id="testing-styles" class="section level2">
+<div id="test-styles" class="section level2">
 <h2>Testing Styles</h2>
 <p>Rmarkdown comes with some pre-packaged <a href="rmd_style">themes and highlight options</a>.</p>
 <div id="themes" class="section level3">
