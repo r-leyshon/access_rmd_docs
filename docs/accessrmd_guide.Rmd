@@ -567,7 +567,7 @@ src attribute value (filename).
 
 ## Testing Styles{#test-styles}
 
-Rmarkdown comes with some pre-packaged [themes and highlight options](rmd_style). 
+Rmarkdown comes with some pre-packaged [themes and highlight options](#rmd_style). 
 
 ### Themes
 
