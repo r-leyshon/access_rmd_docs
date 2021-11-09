@@ -41,3 +41,5 @@ print(vec)
 `anon inline code`
 `r Sys.Date()`
 
+<br><br><a id="wcag" href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">WCAG2.1
+standard Quick Reference</a><br><br>
