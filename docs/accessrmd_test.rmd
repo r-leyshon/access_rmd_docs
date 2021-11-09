@@ -1,4 +1,9 @@
-
+---
+output:
+    html_document:
+      highlight: null
+      theme: null
+---
 <html lang="en">
 <header>
   <meta charset="utf-8"/>

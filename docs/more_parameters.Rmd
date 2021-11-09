@@ -3,6 +3,8 @@ output:
     html_document:
       toc: true
       toc_float: true
+      highlight: null
+      theme: null
 ---
 <html lang="en">
 <header>
@@ -11,7 +13,7 @@ output:
   <h1 class="title toc-ignore">Include a Subtitle and TOC</h1>
   <h2 class="subtitle toc-ignore">Some Sensible Subtitle</h2>
   <h3 class="author toc-ignore">richardleyshon</h3>
-  <h3 class="date toc-ignore">06 Nov 2021</h3>
+  <h3 class="date toc-ignore">08 Nov 2021</h3>
 </header>
 <body>
 ```{r setup, include=FALSE}

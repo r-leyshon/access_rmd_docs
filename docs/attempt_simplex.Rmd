@@ -7,10 +7,10 @@ output:
 <html lang="en">
 <header>
   <meta charset="utf-8"/>
-  <title>You Need To Provide A Title.</title>
-  <h1 class="title toc-ignore">You Need To Provide A Title.</h1>
+  <title>Attempting to apply simplex theme</title>
+  <h1 class="title toc-ignore">Attempting to apply simplex theme</h1>
   <h2 class="author toc-ignore">richardleyshon</h2>
-  <h2 class="date toc-ignore">08 Nov 2021</h2>
+  <h2 class="date toc-ignore">09 Nov 2021</h2>
 </header>
 <body>
 ```{r setup, include=FALSE}

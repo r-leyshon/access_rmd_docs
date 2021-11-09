@@ -244,7 +244,7 @@ A Guide To ‘accessrmd’.
 Richard Leyshon
 </h2>
 <h2 class="date toc-ignore">
-06 November 2021
+08 November 2021
 </h2>
 </header>
 <body>
@@ -296,6 +296,7 @@ output: html_document
 <li><code>inplace = FALSE</code> (the default) will ensure the original Rmd doesn’t get overwritten.</li>
 </ul>
 <pre class="r"><code>access_head(rmd_path = &quot;test.rmd&quot;, lan = &quot;en&quot;)</code></pre>
+<pre><code>No theme found. Specifying theme: null</code></pre>
 <pre><code>Setting html lan to en</code></pre>
 <pre><code>Writing file to accessrmd_test.rmd</code></pre>
 <p><code>access_head()</code> created an adjusted rmd with the filename prefix “accessrmd_”.</p>
@@ -313,13 +314,13 @@ output: html_document
 <pre class="r"><code>lines &lt;- readLines(&quot;accessrmd_test.rmd&quot;)
 # Show only the head
 message(paste(lines[1:7], collapse = &quot;\n&quot;))</code></pre>
-<pre><code>
-&lt;html lang=&quot;en&quot;&gt;
-&lt;header&gt;
-  &lt;meta charset=&quot;utf-8&quot;/&gt;
-  &lt;title&gt;Test&lt;/title&gt;
-  &lt;h1 class=&quot;title toc-ignore&quot;&gt;Test&lt;/h1&gt;
-  &lt;h2 class=&quot;author toc-ignore&quot;&gt;Richard Leyshon&lt;/h2&gt;</code></pre>
+<pre><code>---
+output:
+    html_document:
+      highlight: null
+      theme: null
+---
+&lt;html lang=&quot;en&quot;&gt;</code></pre>
 <hr />
 </div>
 <div id="access_img" class="section level3">

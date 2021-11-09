@@ -4,9 +4,6 @@ output:
       toc: true
       toc_float: true
       highlight: null
-editor_options: 
-  markdown: 
-    wrap: 72
 ---
 
 <html lang="en">
@@ -142,6 +139,9 @@ function. We just need to call it and specify a few parameters:
 access_head(rmd_path = "test.rmd", lan = "en")
 ```
 
+Note that this document had no theme set. {accessrmd} has now explicitly set the
+theme to 'null'. 
+
 `access_head()` created an adjusted rmd with the filename prefix
 "accessrmd_".
 
@@ -171,8 +171,14 @@ can also view the file lines to see how the file was modified.
 ```{r}
 lines <- readLines("accessrmd_test.rmd")
 # Show only the head
-message(paste(lines[1:7], collapse = "\n"))
+message(paste(lines[1:14], collapse = "\n"))
 ```
+
+In the above output, you can see the approach taken to building styled HTML
+outputs that do not result in accessibility issues. The highlight option should
+always be set to null due to accessibility errors with the highlight options.
+The theme should be null by default, but can also be set to a number of options,
+refer to the section on [testing styles](#test-styles) for more guidance.
 
 ***
 
@@ -272,6 +278,32 @@ access_rmd("more_parameters.Rmd", title = "Include a Subtitle and TOC",
 
 See the output file [more_parameters.Rmd](docs/more_parameters.html).
 
+#### Setting theme
+
+'access_rmd()' allows the user to specify which theme should be used to style
+the text of the rmarkdown document. 
+
+```{r}
+access_rmd(filenm = "flatly_styling", title = "Applying the flatly theme",
+           lan = "en", force = TRUE, theme = "flatly")
+```
+
+Here is the link to [flatly_styling.html](docs/flatly_styling.html)
+
+Note that there are accessibility errors with the simplex and cerulean themes. Attempting to apply these themes results in a warning and setting the theme to null.
+
+```{r}
+access_rmd("attempt_simplex", title = "Attempting to apply simplex theme",
+           lan = "en", force = TRUE, theme = "simplex")
+```
+
+Here is the link to [attempt_simplex.html](docs/attempt_simplex.html). You should see that null theme has been specified. To confirm this:
+
+```{r}
+lin <- readLines("attempt_simplex.Rmd")
+# Display header
+lin[1:14]
+```
 
 ***
 
@@ -533,7 +565,7 @@ src attribute value (filename).
 
 ***
 
-## Testing Styles
+## Testing Styles{#test-styles}
 
 Rmarkdown comes with some pre-packaged [themes and highlight options](rmd_style). 
 
