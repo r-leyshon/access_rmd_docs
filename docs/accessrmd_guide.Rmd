@@ -603,8 +603,6 @@ standard Quick Reference</a> <br> <br>
 <a id="plac_alt" href="https://www.w3.org/WAI/GL/WCAG20/tests/test6.html" target="_blank">W3 guidance on alt text placeholder values.</a><br> <br>
 <a id="rmd_style" href="https://bookdown.org/yihui/rmarkdown/html-document.html#appearance_and_style" target="_blank">R Markdown: The Definitive Guide, 3.1.4 Appearance and style.</a><br> <br>
 
-Links to the WAVE accessibility checks can be found in the [appendix](#append)
-
 ***
 
 ## Appendix{#append}
