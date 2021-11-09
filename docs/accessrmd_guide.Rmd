@@ -607,10 +607,11 @@ standard Quick Reference</a> <br> <br>
 
 ## Appendix{#append}
 
-### Styles
+### Themes
 
 [cerulean.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//cerulean.html)<br>
 [cosmo.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//cosmo.html)<br>
+[default.rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//default.html)<br>
 [flatly.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//flatly.html)<br>
 [journal.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//journal.html)<br>
 [lumen.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_themes//lumen.html)<br>
