@@ -27,7 +27,7 @@ summary(cars)
 You can also embed plots, for example:
 
 ```{r pressure}
-plt <- ggplot(pressure, aes(x = pressure, y = temperature)) +
+plt <- ggplot(pressure, aes(x = temperature, y = pressure)) +
   geom_point()
 
 ```
