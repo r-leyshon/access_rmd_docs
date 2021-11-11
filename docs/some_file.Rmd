@@ -2,7 +2,7 @@
 output:
     html_document:
       highlight: null
-      theme: null
+      theme: default
 ---
 <html lang="en">
 <header>
@@ -10,7 +10,7 @@ output:
   <title>You Need To Provide A Title.</title>
   <h1 class="title toc-ignore">You Need To Provide A Title.</h1>
   <h2 class="author toc-ignore">richardleyshon</h2>
-  <h2 class="date toc-ignore">09 Nov 2021</h2>
+  <h2 class="date toc-ignore">11 Nov 2021</h2>
 </header>
 <body>
 ```{r setup, include=FALSE}

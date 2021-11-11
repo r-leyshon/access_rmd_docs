@@ -2,7 +2,7 @@
 output:
     html_document:
       highlight: null
-      theme: null
+      theme: default
 ---
 <html lang="en">
 <header>

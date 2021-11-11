@@ -244,7 +244,7 @@ A Guide To ‘accessrmd’.
 Richard Leyshon
 </h2>
 <h2 class="date toc-ignore">
-09 November 2021
+11 November 2021
 </h2>
 </header>
 <body>
@@ -296,7 +296,7 @@ output: html_document
 <li><code>inplace = FALSE</code> (the default) will ensure the original Rmd doesn’t get overwritten.</li>
 </ul>
 <pre class="r"><code>access_head(rmd_path = &quot;test.rmd&quot;, lan = &quot;en&quot;)</code></pre>
-<pre><code>No theme found. Specifying theme: null</code></pre>
+<pre><code>No theme found. Specifying theme: default</code></pre>
 <pre><code>Setting html lan to en</code></pre>
 <pre><code>Writing file to accessrmd_test.rmd</code></pre>
 <p>Note that this document had no theme set. {accessrmd} has now explicitly set the theme to ‘null’.</p>
@@ -319,7 +319,7 @@ message(paste(lines[1:14], collapse = &quot;\n&quot;))</code></pre>
 output:
     html_document:
       highlight: null
-      theme: null
+      theme: default
 ---
 &lt;html lang=&quot;en&quot;&gt;
 &lt;header&gt;
@@ -412,6 +412,8 @@ TRUE. Overwriting filenm.</code></pre>
            lan = &quot;en&quot;, force = TRUE, theme = &quot;flatly&quot;)</code></pre>
 <pre><code>Warning in access_rmd(filenm = &quot;flatly_styling&quot;, title = &quot;Applying the flatly theme&quot;, : &#39;force&#39; is
 TRUE. Overwriting filenm.</code></pre>
+<pre><code>Warning in insert_yaml(toc = toc, header = header, text = text, lan = lan, : The flatly theme has known accessibility errors and is
+    not supported by this function.</code></pre>
 <pre><code>Setting html lan to en</code></pre>
 <pre><code>Writing file to flatly_styling.Rmd</code></pre>
 <p>Here is the link to <a href="docs/flatly_styling.html">flatly_styling.html</a></p>
@@ -432,7 +434,7 @@ lin[1:14]</code></pre>
  [2] &quot;output:&quot;                                                                
  [3] &quot;    html_document:&quot;                                                     
  [4] &quot;      highlight: null&quot;                                                  
- [5] &quot;      theme: null&quot;                                                      
+ [5] &quot;      theme: default&quot;                                                   
  [6] &quot;---&quot;                                                                    
  [7] &quot;&lt;html lang=\&quot;en\&quot;&gt;&quot;                                                     
  [8] &quot;&lt;header&gt;&quot;                                                               
@@ -440,7 +442,7 @@ lin[1:14]</code></pre>
 [10] &quot;  &lt;title&gt;Attempting to apply simplex theme&lt;/title&gt;&quot;                     
 [11] &quot;  &lt;h1 class=\&quot;title toc-ignore\&quot;&gt;Attempting to apply simplex theme&lt;/h1&gt;&quot;
 [12] &quot;  &lt;h2 class=\&quot;author toc-ignore\&quot;&gt;richardleyshon&lt;/h2&gt;&quot;                  
-[13] &quot;  &lt;h2 class=\&quot;date toc-ignore\&quot;&gt;09 Nov 2021&lt;/h2&gt;&quot;                       
+[13] &quot;  &lt;h2 class=\&quot;date toc-ignore\&quot;&gt;11 Nov 2021&lt;/h2&gt;&quot;                       
 [14] &quot;&lt;/header&gt;&quot;                                                              </code></pre>
 <hr />
 </div>

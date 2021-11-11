@@ -2,7 +2,7 @@
 output:
     html_document:
       highlight: null
-      theme: flatly
+      theme: default
 ---
 <html lang="en">
 <header>
@@ -10,7 +10,7 @@ output:
   <title>Applying the flatly theme</title>
   <h1 class="title toc-ignore">Applying the flatly theme</h1>
   <h2 class="author toc-ignore">richardleyshon</h2>
-  <h2 class="date toc-ignore">09 Nov 2021</h2>
+  <h2 class="date toc-ignore">11 Nov 2021</h2>
 </header>
 <body>
 ```{r setup, include=FALSE}
