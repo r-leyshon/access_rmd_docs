@@ -637,6 +637,9 @@ standard Quick Reference</a> <br> <br>
 [textmate.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_highlights//highlight_textmate.html)<br>
 [zenburn.Rmd](https://wave.webaim.org/report#/https://r-leyshon.github.io/access_rmd_docs/docs/test_highlights//highlight_zenburn.html)<br>
 
+### Package Outputs
+
+['access_rmd()' output](docs/test_outputs/access_rmd.html)
 
 ***
 
