@@ -1,0 +1,75 @@
+---
+title: "Testing 'access_head()'"
+author: "Richard Leyshon"
+date: "03/12/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(accessrmd)
+library(ggplot2)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see [RStudio's Rmarkdown guidance](http://rmarkdown.rstudio.com).
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plt <- ggplot(pressure, aes(x = temperature, y = pressure)) + geom_point()
+access_img(plt, alt = "Vapour pressure of mercury as a product of temperature",
+           wid = 500)
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## A tabset to test {.tabset}
+
+
+### Section 1
+
+Sample text. Testing **bold**.
+
+### Section 2
+
+More Sample text
+
+```{r}
+x <- as.data.frame(rnorm(300))
+plt <- ggplot(x, aes(x[, 1])) + geom_density()
+access_img(
+  plt,
+  alt = "Density plot of a sample taken from a normal distribution",
+  ht = 500)
+```
+
+
+### Section 3
+
+Yet more sample text
+
+```{r}
+# some code comments to check
+vec <- c(runif(100))
+# Some output to check
+summary(vec)
+
+```
+
+
+## The next header cancels the tabset
+
+There doesn't appear to be an accordion feature native to Rmarkdown. 
+
+
