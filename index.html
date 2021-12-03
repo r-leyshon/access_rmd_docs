@@ -1648,8 +1648,8 @@ Output created: accesible_images.html</code></pre>
 <p>‘access_rmd()’ allows the user to specify which theme should be used to style the text of the rmarkdown document.</p>
 <pre class="r"><code>access_rmd(filenm = &quot;flatly_styling&quot;, title = &quot;Applying the flatly theme&quot;,
            lan = &quot;en&quot;, force = TRUE, theme = &quot;flatly&quot;)</code></pre>
-<pre><code>Warning in access_rmd(filenm = &quot;flatly_styling&quot;, title = &quot;Applying the flatly
-theme&quot;, : &#39;force&#39; is TRUE. Overwriting filenm.</code></pre>
+<pre><code>Warning in access_rmd(filenm = &quot;flatly_styling&quot;, title = &quot;Applying the flatly theme&quot;, :
+&#39;force&#39; is TRUE. Overwriting filenm.</code></pre>
 <pre><code>Warning in insert_yaml(toc = toc, header = header, text = text, lan = lan, : The flatly theme has known accessibility errors and is
     not supported by this function.</code></pre>
 <pre><code>Setting html lan to en</code></pre>
@@ -1658,8 +1658,8 @@ theme&quot;, : &#39;force&#39; is TRUE. Overwriting filenm.</code></pre>
 <p>Note that there are accessibility errors with the simplex and cerulean themes. Attempting to apply these themes results in a warning and setting the theme to null.</p>
 <pre class="r"><code>access_rmd(&quot;attempt_simplex&quot;, title = &quot;Attempting to apply simplex theme&quot;,
            lan = &quot;en&quot;, force = TRUE, theme = &quot;simplex&quot;)</code></pre>
-<pre><code>Warning in access_rmd(&quot;attempt_simplex&quot;, title = &quot;Attempting to apply simplex
-theme&quot;, : &#39;force&#39; is TRUE. Overwriting filenm.</code></pre>
+<pre><code>Warning in access_rmd(&quot;attempt_simplex&quot;, title = &quot;Attempting to apply simplex theme&quot;, :
+&#39;force&#39; is TRUE. Overwriting filenm.</code></pre>
 <pre><code>Warning in insert_yaml(toc = toc, header = header, text = text, lan = lan, : The simplex theme has known accessibility errors and is
     not supported by this function.</code></pre>
 <pre><code>Setting html lan to en</code></pre>
@@ -1699,42 +1699,44 @@ lin[1:14]</code></pre>
 <p>Searches (recursively) a directory for Rmarkdown files. Returns the found Rmd relative paths.</p>
 <pre class="r"><code>rmds &lt;- retrieve_rmds()
 rmds</code></pre>
-<pre><code> [1] &quot;./accesible_images.rmd&quot;                    
- [2] &quot;./accessrmd_guide.Rmd&quot;                     
- [3] &quot;./accessrmd_test.rmd&quot;                      
- [4] &quot;./attempt_simplex.Rmd&quot;                     
- [5] &quot;./broken_link.Rmd&quot;                         
- [6] &quot;./flatly_styling.Rmd&quot;                      
- [7] &quot;./images.rmd&quot;                              
- [8] &quot;./more_parameters.Rmd&quot;                     
- [9] &quot;./some_file.Rmd&quot;                           
-[10] &quot;./sus_alt_test.Rmd&quot;                        
-[11] &quot;./test.Rmd&quot;                                
-[12] &quot;./test_highlights/highlight_breezedark.Rmd&quot;
-[13] &quot;./test_highlights/highlight_default.Rmd&quot;   
-[14] &quot;./test_highlights/highlight_espresso.Rmd&quot;  
-[15] &quot;./test_highlights/highlight_haddock.Rmd&quot;   
-[16] &quot;./test_highlights/highlight_kate.Rmd&quot;      
-[17] &quot;./test_highlights/highlight_monochrome.Rmd&quot;
-[18] &quot;./test_highlights/highlight_null.Rmd&quot;      
-[19] &quot;./test_highlights/highlight_pygments.Rmd&quot;  
-[20] &quot;./test_highlights/highlight_tango.Rmd&quot;     
-[21] &quot;./test_highlights/highlight_textmate.Rmd&quot;  
-[22] &quot;./test_highlights/highlight_zenburn.Rmd&quot;   
-[23] &quot;./test_outputs/access_rmd.Rmd&quot;             
-[24] &quot;./test_themes/cerulean.Rmd&quot;                
-[25] &quot;./test_themes/cosmo.Rmd&quot;                   
-[26] &quot;./test_themes/default.Rmd&quot;                 
-[27] &quot;./test_themes/flatly.Rmd&quot;                  
-[28] &quot;./test_themes/journal.Rmd&quot;                 
-[29] &quot;./test_themes/lumen.Rmd&quot;                   
-[30] &quot;./test_themes/paper.Rmd&quot;                   
-[31] &quot;./test_themes/readable.Rmd&quot;                
-[32] &quot;./test_themes/sandstone.Rmd&quot;               
-[33] &quot;./test_themes/simplex.Rmd&quot;                 
-[34] &quot;./test_themes/spacelab.Rmd&quot;                
-[35] &quot;./test_themes/united.Rmd&quot;                  
-[36] &quot;./test_themes/yeti.Rmd&quot;                    </code></pre>
+<pre><code> [1] &quot;./accesible_images.rmd&quot;                         
+ [2] &quot;./accessrmd_guide.Rmd&quot;                          
+ [3] &quot;./accessrmd_test.rmd&quot;                           
+ [4] &quot;./attempt_simplex.Rmd&quot;                          
+ [5] &quot;./broken_link.Rmd&quot;                              
+ [6] &quot;./flatly_styling.Rmd&quot;                           
+ [7] &quot;./images.rmd&quot;                                   
+ [8] &quot;./more_parameters.Rmd&quot;                          
+ [9] &quot;./some_file.Rmd&quot;                                
+[10] &quot;./sus_alt_test.Rmd&quot;                             
+[11] &quot;./test.Rmd&quot;                                     
+[12] &quot;./test_highlights/highlight_breezedark.Rmd&quot;     
+[13] &quot;./test_highlights/highlight_default.Rmd&quot;        
+[14] &quot;./test_highlights/highlight_espresso.Rmd&quot;       
+[15] &quot;./test_highlights/highlight_haddock.Rmd&quot;        
+[16] &quot;./test_highlights/highlight_kate.Rmd&quot;           
+[17] &quot;./test_highlights/highlight_monochrome.Rmd&quot;     
+[18] &quot;./test_highlights/highlight_null.Rmd&quot;           
+[19] &quot;./test_highlights/highlight_pygments.Rmd&quot;       
+[20] &quot;./test_highlights/highlight_tango.Rmd&quot;          
+[21] &quot;./test_highlights/highlight_textmate.Rmd&quot;       
+[22] &quot;./test_highlights/highlight_zenburn.Rmd&quot;        
+[23] &quot;./test_outputs/access_rmd.Rmd&quot;                  
+[24] &quot;./test_outputs/accessrmd_standard_rmarkdown.Rmd&quot;
+[25] &quot;./test_outputs/standard_rmarkdown.Rmd&quot;          
+[26] &quot;./test_themes/cerulean.Rmd&quot;                     
+[27] &quot;./test_themes/cosmo.Rmd&quot;                        
+[28] &quot;./test_themes/default.Rmd&quot;                      
+[29] &quot;./test_themes/flatly.Rmd&quot;                       
+[30] &quot;./test_themes/journal.Rmd&quot;                      
+[31] &quot;./test_themes/lumen.Rmd&quot;                        
+[32] &quot;./test_themes/paper.Rmd&quot;                        
+[33] &quot;./test_themes/readable.Rmd&quot;                     
+[34] &quot;./test_themes/sandstone.Rmd&quot;                    
+[35] &quot;./test_themes/simplex.Rmd&quot;                      
+[36] &quot;./test_themes/spacelab.Rmd&quot;                     
+[37] &quot;./test_themes/united.Rmd&quot;                       
+[38] &quot;./test_themes/yeti.Rmd&quot;                         </code></pre>
 <p>This vector of Rmarkdown path names can be used for various operations.</p>
 <pre class="r"><code>for (doc in rmds) {
   print(doc)
@@ -1763,6 +1765,8 @@ rmds</code></pre>
 [1] &quot;./test_highlights/highlight_textmate.Rmd&quot;
 [1] &quot;./test_highlights/highlight_zenburn.Rmd&quot;
 [1] &quot;./test_outputs/access_rmd.Rmd&quot;
+[1] &quot;./test_outputs/accessrmd_standard_rmarkdown.Rmd&quot;
+[1] &quot;./test_outputs/standard_rmarkdown.Rmd&quot;
 [1] &quot;./test_themes/cerulean.Rmd&quot;
 [1] &quot;./test_themes/cosmo.Rmd&quot;
 [1] &quot;./test_themes/default.Rmd&quot;
@@ -2030,6 +2034,7 @@ kor 90</p>
 <div id="package-outputs" class="section level3">
 <h3>Package Outputs</h3>
 <p><a href="docs/test_outputs/access_rmd.html">‘access_rmd()’ output</a></p>
+<p><a href="docs/test_outputs/accessrmd_standard_rmarkdown.html">‘access_head()’ output</a></p>
 <hr />
 </body>
 </html>

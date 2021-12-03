@@ -641,6 +641,8 @@ standard Quick Reference</a> <br> <br>
 
 ['access_rmd()' output](docs/test_outputs/access_rmd.html)
 
+['access_head()' output](docs/test_outputs/accessrmd_standard_rmarkdown.html)
+
 ***
 
 </body>
